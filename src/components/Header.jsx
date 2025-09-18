@@ -78,22 +78,25 @@ export default function Header() {
           </div>
 
 
-          {langOpen && (
-            <div className="absolute top-full mt-2 right-0 rounded shadow-lg p-2 flex flex-col gap-2 md:bg-white">
-              {Object.entries(flags)
-                .filter(([key]) => key !== currentLang)
-                .map(([key, { img, alt }]) => (
-                  <button
-                    key={key}
-                    onClick={() => handleLangChange(key)}
-                    className="hidden md:flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
-                  >
-                    <img src={img} alt={alt} className="h-5 w-auto" />
-                    <span className="text-sm text-gray-700">{alt}</span>
-                  </button>
-                ))}
-            </div>
-          )}
+          <div
+            className={`absolute top-full mt-2 right-0 rounded shadow-lg p-2 flex flex-col gap-2 md:bg-white 
+            transform transition-all duration-300 origin-top-right
+            ${langOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
+          >
+            {Object.entries(flags)
+              .filter(([key]) => key !== currentLang)
+              .map(([key, { img, alt }]) => (
+                <button
+                  key={key}
+                  onClick={() => handleLangChange(key)}
+                  className="hidden md:flex items-center gap-2 hover:bg-gray-100 p-1 rounded"
+                >
+                  <img src={img} alt={alt} className="h-5 w-auto" />
+                  <span className="text-sm text-gray-700">{alt}</span>
+                </button>
+              ))}
+          </div>
+
         </div>
 
         {/* Botón Mobile */}
@@ -119,46 +122,48 @@ export default function Header() {
           ))}
 
           {/* Idiomas en Mobile */}
-        <div className="border-t border-[#039e82] py-3">
-          <div className="flex justify-center">
+          <div className="border-t border-[#039e82] py-3">
+            <div className="flex justify-center">
+              <div
+                role="button"
+                tabIndex={0}
+                onClick={() => setLangOpen(!langOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setLangOpen(!langOpen);
+                  }
+                }}
+                aria-haspopup="menu"
+                aria-expanded={langOpen}
+                className="flex items-center gap-2 text-white cursor-pointer focus:outline-none"
+              >
+                <img
+                  src={flags[currentLang].img}
+                  alt={flags[currentLang].alt}
+                  className="h-6 w-auto"
+                />
+                <span className="text-sm">▼</span>
+              </div>
+            </div>
+
             <div
-              role="button"
-              tabIndex={0}
-              onClick={() => setLangOpen(!langOpen)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  setLangOpen(!langOpen);
-                }
-              }}
-              aria-haspopup="menu"
-              aria-expanded={langOpen}
-              className="flex items-center gap-2 text-white cursor-pointer focus:outline-none"
+              className={`mt-2 flex justify-center gap-3 transition-all duration-200 transform origin-top
+                ${langOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
             >
-              <img
-                src={flags[currentLang].img}
-                alt={flags[currentLang].alt}
-                className="h-6 w-auto"
-              />
-              <span className="text-sm">▼</span>
+              {Object.entries(flags)
+                .filter(([key]) => key !== currentLang)
+                .map(([key, { img, alt }]) => (
+                  <button
+                    key={key}
+                    onClick={() => handleLangChange(key)}
+                  >
+                    <img src={img} alt={alt} className="h-6 w-auto" />
+                  </button>
+                ))}
             </div>
           </div>
 
-            {langOpen && (
-              <div className="mt-2 flex justify-center gap-3">
-                {Object.entries(flags)
-                  .filter(([key]) => key !== currentLang)
-                  .map(([key, { img, alt }]) => (
-                    <button
-                      key={key}
-                      onClick={() => handleLangChange(key)}
-                    >
-                      <img src={img} alt={alt} className="h-6 w-auto" />
-                    </button>
-                  ))}
-              </div>
-            )}
-          </div>
         </div>
       )}
     </header>
