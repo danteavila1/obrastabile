@@ -32,16 +32,18 @@ export default function Header() {
       <div className="flex justify-between items-center px-7 py-3 relative">
         
         {/* Logo */}
-        <div className="flex-1 flex justify-start relative">
-          <a href="/" className="flex items-center gap-2">
-            <img 
-              src={logo} 
-              alt="Logo Fundación Stabile" 
-              className="h-20 md:h-20 w-auto drop-shadow-lg 
-                     absolute md:right-40 lg:right-55"
-            />
-          </a>
-        </div>
+      <div className="flex-1 flex justify-start relative">
+        <a href="/" className="flex items-center gap-2">
+          <img
+            src={logo}
+            alt="Logo Fundación Stabile"
+            className="h-20 md:h-20 w-auto drop-shadow-lg 
+                      absolute md:right-40 lg:right-55 
+                      transition-transform duration-300 hover:scale-90"
+          />
+        </a>
+      </div>
+
 
 
         {/* Menú Desktop */}
@@ -71,15 +73,19 @@ export default function Header() {
             }}
             aria-haspopup="menu"
             aria-expanded={langOpen}
-            className="hidden md:flex items-center gap-2 text-white cursor-pointer focus:outline-none"
+            className="hidden md:flex items-center gap-2 text-white cursor-pointer focus:outline-none group"
           >
-            <img src={flags[currentLang].img} alt={flags[currentLang].alt} className="h-6 w-auto" />
-            <span className="text-sm">▼</span>
+            <img
+            src={flags[currentLang].img}
+            alt={flags[currentLang].alt}
+            className="h-6 w-auto group-hover:brightness-110" 
+          />
+          <span className="text-sm transition-colors group-hover:text-[#fad016]">▼</span>
           </div>
 
 
           <div
-            className={`absolute top-full mt-2 right-0 rounded shadow-lg p-2 flex flex-col gap-2 md:bg-white 
+            className={`absolute top-full mt-2 right-0 rounded shadow-lg p-2 flex flex-col gap-2 md:bg-[#04ab8d]
             transform transition-all duration-300 origin-top-right
             ${langOpen ? "opacity-100 scale-100" : "opacity-0 scale-95 pointer-events-none"}`}
           >
@@ -136,14 +142,14 @@ export default function Header() {
                 }}
                 aria-haspopup="menu"
                 aria-expanded={langOpen}
-                className="flex items-center gap-2 text-white cursor-pointer focus:outline-none"
+                className="flex items-center gap-2 text-white cursor-pointer focus:outline-none group"
               >
                 <img
                   src={flags[currentLang].img}
                   alt={flags[currentLang].alt}
-                  className="h-6 w-auto"
+                  className="h-6 w-auto group-hover:brightness-110"
                 />
-                <span className="text-sm">▼</span>
+                <span className="text-sm transition-colors group-hover:text-[#fad016]">▼</span>
               </div>
             </div>
 
