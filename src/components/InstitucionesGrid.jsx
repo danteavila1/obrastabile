@@ -43,7 +43,7 @@ export default function InstitucionesGrid() {
   return (
     <section className="relative mt-32 w-full">
       {/* Texto de ejes */}
-      <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-6 flex-wrap">
+      <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-6 flex-wrap">
         {ejes.map((eje) => (
           <span
             key={eje.key}
@@ -65,7 +65,7 @@ export default function InstitucionesGrid() {
           <img
             src={bigLogo}
             alt="Logo Fundación"
-            className="max-h-72 md:max-h-80 lg:max-h-96 object-contain"
+            className="max-h-72 md:max-h-80 object-contain"
           />
         </div>
 

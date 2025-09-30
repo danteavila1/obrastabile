@@ -28,7 +28,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-[#04ab8d] shadow-md shadow-black/20 fixed top-10 left-1/2 transform -translate-x-1/2 w-full z-50 md:rounded-xl max-w-3xl lg:max-w-4xl">
+    <header className="bg-[#04ab8d] shadow-md shadow-black/20 relative top-1 left-1/2 transform -translate-x-1/2 w-full z-50 rounded-xl max-w-3xl lg:max-w-4xl">
       <div className="flex justify-between items-center px-7 py-3 relative">
         {/* Logo */}
       <div className="flex-1 flex justify-start relative ">
