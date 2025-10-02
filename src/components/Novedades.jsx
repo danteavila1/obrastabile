@@ -37,7 +37,7 @@ export default function NovedadesSection() {
   return (
     <section className="relative overflow-hidden z-10 pb-20 pt-20 rounded-b-[50px] mt-10">
 
-        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 xl:px-0">
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 xl:px-0 text-left">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
           <span className="relative">
             NOVEDADES

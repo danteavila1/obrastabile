@@ -6,7 +6,7 @@ export default function SocialBar() {
       {/* Fondo semitransparente */}
       <div className="bg-black/40 p-3 rounded-2xl shadow-lg flex flex-col gap-4">
         <a
-          href="https://facebook.com/tuperfil"
+          href="https://www.facebook.com/profile.php?id=61572605158767"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#fad016] transition-colors"

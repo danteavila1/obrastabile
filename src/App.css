@@ -42,3 +42,14 @@
 .read-the-docs {
   color: #888;
 }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  display: flex;
+  width: max-content;   /* asegura que el contenido se mida por su tamaño real */
+  animation: scroll 20s linear infinite;
+}
