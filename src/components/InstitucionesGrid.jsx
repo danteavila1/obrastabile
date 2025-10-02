@@ -31,9 +31,9 @@ const institutions = [
 
 // Los ejes
 const ejes = [
-  { key: "formal", label: "EDUCACIÓN FORMAL," },
-  { key: "inclusiva", label: "EDUCACIÓN INCLUSIVA," },
-  { key: "deportes", label: "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES," },
+  { key: "formal", label: "EDUCACIÓN FORMAL - " },
+  { key: "inclusiva", label: "EDUCACIÓN INCLUSIVA - " },
+  { key: "deportes", label: "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES - " },
   { key: "trabajo", label: "EDUCACIÓN Y TRABAJO." },
 ];
 
@@ -41,9 +41,9 @@ export default function InstitucionesGrid() {
   const [hoverEje, setHoverEje] = useState(null);
 
   return (
-    <section className="relative mt-32 w-full">
+    <section className="relative mt-15 w-full">
       {/* Texto de ejes */}
-      <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-6 flex-wrap">
+      <h2 className="text-2xl md:text-3xl text-white text-center mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-6 flex-wrap">
         {ejes.map((eje) => (
           <span
             key={eje.key}
@@ -81,7 +81,8 @@ export default function InstitucionesGrid() {
                             hoverEje === inst.eje
                               ? "border-[#fad016]"
                               : "border-white opacity-80"
-                          }`}
+                          }
+                          group hover:border-[#fad016]`}
             >
               {/* Glow detrás del logo */}
               {hoverEje === inst.eje && (
@@ -90,11 +91,16 @@ export default function InstitucionesGrid() {
                 </div>
               )}
 
+              {/* Glow detrás del logo cuando paso sobre este logo */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <div className="w-24 h-24 rounded-full bg-[#fad016] opacity-40 blur-xl"></div>
+              </div>
+
               {/* Logo */}
               <img
                 src={inst.logo}
                 alt={inst.name}
-                className="relative z-10 max-h-20 object-contain mb-2"
+                className="relative z-10 max-h-20 object-contain mb-2 transition-transform duration-300 group-hover:scale-110"
               />
             </div>
           ))}

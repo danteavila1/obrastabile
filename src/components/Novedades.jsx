@@ -35,11 +35,14 @@ const novedades = [
 
 export default function NovedadesSection() {
   return (
-    <section className="relative overflow-hidden z-10 pb-20 pt-20 rounded-b-[50px]">
+    <section className="relative overflow-hidden z-10 pb-20 pt-20 rounded-b-[50px] mt-10">
 
         <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 xl:px-0">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            Novedades
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
+          <span className="relative">
+            NOVEDADES
+            <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
+          </span>
         </h2>
 
         <div className="flex flex-wrap gap-8">
@@ -60,15 +63,15 @@ export default function NovedadesSection() {
                 {/* 👇 le agregamos text-left aquí */}
                 <div className="lg:w-1/2 text-left pb-3">
                     <span
-                    className={`inline-flex text-${item.color}-700 bg-${item.color}-200 font-medium text-sm py-1 rounded-full mb-4`}
+                    className={`inline-flex text-[#fad016] bg-${item.color}-200 font-medium text-sm py-1 rounded-full mb-4`}
                     >
                     {item.categoria}
                     </span>
-                    <h3 className="text-2xl font-bold mb-4">{item.titulo}</h3>
-                    <p className="mb-4 text-white-600">{item.descripcion}</p>
-                    <div className="flex items-center gap-3 text-sm text-gray-800">
+                    <h3 className="text-2xl font-bold mb-2">{item.titulo}</h3>
+                    <p className="mb-5 text-white-600">{item.descripcion}</p>
+                    <div className="flex items-center gap-3 text-sm text-gray-300">
                     <p>{item.autor}</p>
-                    <span className="w-[3px] h-[3px] bg-gray-800 rounded-full"></span>
+                    <span className="w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
                     <p>{item.fecha}</p>
                     </div>
                 </div>
@@ -89,14 +92,14 @@ export default function NovedadesSection() {
                 {/* 👇 lo mismo acá */}
                 <div className="sm:w-1/2 text-left">
                     <span
-                    className={`inline-flex text-${item.color}-700 bg-${item.color}-200 font-medium text-sm py-1 rounded-full mb-3`}
+                    className={`inline-flex text-[#fad016] bg-${item.color}-200 font-medium text-sm py-1 rounded-full mb-3`}
                     >
                     {item.categoria}
                     </span>
-                    <h4 className="font-semibold text-lg mb-2">{item.titulo}</h4>
-                    <div className="flex items-center gap-2 text-sm text-gray-800">
+                    <h4 className="font-semibold text-lg mb-3">{item.titulo}</h4>
+                    <div className="flex items-center gap-2 text-sm text-gray-300">
                     <p>{item.autor}</p>
-                    <span className="w-[3px] h-[3px] bg-gray-800 rounded-full"></span>
+                    <span className="w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
                     <p>{item.fecha}</p>
                     </div>
                 </div>
