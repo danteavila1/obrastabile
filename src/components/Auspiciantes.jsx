@@ -19,8 +19,6 @@ export default function Auspiciantes() {
        </h2>
 
 
-
-
       {/* Carrusel infinito */}
       <div className="relative w-full overflow-hidden">
         <div className="flex animate-scroll whitespace-nowrap">

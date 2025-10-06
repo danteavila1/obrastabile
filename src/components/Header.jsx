@@ -38,7 +38,7 @@ export default function Header() {
             alt="Logo Fundación Stabile"
             className="h-20 md:h-20 w-auto drop-shadow-lg 
                       absolute md:right-40 lg:right-55 
-                      transition-transform duration-300 hover:scale-90"
+                      transition-transform duration-300 hover:scale-93"
           />
         </a>
       </div>

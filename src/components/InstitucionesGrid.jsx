@@ -13,21 +13,22 @@ import logo10 from "../assets/logos/secundario.webp";
 import logo11 from "../assets/logos/iurp.webp";
 import logo12 from "../assets/logos/centrorecreativo.webp";
 
-// Array con logo, nombre y eje al que pertenecen
+// Array con logo, nombre, eje y tooltip
 const institutions = [
-  { name: "Institución 1", logo: logo1, eje: "formal" },
-  { name: "Institución 2", logo: logo2, eje: "inclusiva" },
-  { name: "Institución 3", logo: logo3, eje: "deportes" },
-  { name: "Institución 4", logo: logo4, eje: "trabajo" },
-  { name: "Institución 5", logo: logo5, eje: "formal" },
-  { name: "Institución 6", logo: logo6, eje: "inclusiva" },
-  { name: "Institución 7", logo: logo7, eje: "deportes" },
-  { name: "Institución 8", logo: logo8, eje: "trabajo" },
-  { name: "Institución 9", logo: logo9, eje: "formal" },
-  { name: "Institución 10", logo: logo10, eje: "inclusiva" },
-  { name: "Institución 11", logo: logo11, eje: "deportes" },
-  { name: "Institución 12", logo: logo12, eje: "trabajo" },
+  { name: "Institución 1", logo: logo1, eje: "formal", tooltip: "Observatorio" },
+  { name: "Institución 2", logo: logo2, eje: "inclusiva", tooltip: "Club" },
+  { name: "Institución 3", logo: logo3, eje: "deportes", tooltip: "Congreso" },
+  { name: "Institución 4", logo: logo4, eje: "trabajo", tooltip: "Concurso" },
+  { name: "Institución 5", logo: logo5, eje: "formal", tooltip: "Instituto" },
+  { name: "Institución 6", logo: logo6, eje: "inclusiva", tooltip: "Programa Porvenir" },
+  { name: "Institución 7", logo: logo7, eje: "deportes", tooltip: "Centro pedagógico" },
+  { name: "Institución 8", logo: logo8, eje: "trabajo", tooltip: "Italia en la patagónia" },
+  { name: "Institución 9", logo: logo9, eje: "formal", tooltip: "Primaria" },
+  { name: "Institución 10", logo: logo10, eje: "inclusiva", tooltip: "Secundaria" },
+  { name: "Institución 11", logo: logo11, eje: "deportes", tooltip: "Instituto Universitario" },
+  { name: "Institución 12", logo: logo12, eje: "trabajo", tooltip: "Centro recreativo" },
 ];
+
 
 // Los ejes
 const ejes = [
@@ -95,6 +96,11 @@ export default function InstitucionesGrid() {
               <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <div className="w-24 h-24 rounded-full bg-[#fad016] opacity-40 blur-xl"></div>
               </div>
+
+            {/* Tooltip flotante */}
+            <div className="absolute top-0 -translate-y-6 bg-black text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 pointer-events-none">
+              {inst.tooltip}
+            </div>
 
               {/* Logo */}
               <img

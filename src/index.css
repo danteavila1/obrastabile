@@ -32,6 +32,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden;
   @apply bg-gradient-to-r from-[#000000] to-[#404040] text-white;
 }
 

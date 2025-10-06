@@ -6,6 +6,7 @@ import NovedadesSection from "./components/Novedades";
 import SocialBar from "./components/SocialBar";
 import WhatsAppButton from "./components/WhatsAppButton";
 import Auspiciantes from "./components/Auspiciantes"; 
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
       <InstitucionesGrid />
       <NovedadesSection />
       <Auspiciantes /> 
+      <Footer />
       <SocialBar />
       <WhatsAppButton />
+      
     </>
   );
 }
