@@ -12,22 +12,24 @@ import logo9 from "../assets/logos/primaria.webp";
 import logo10 from "../assets/logos/secundario.webp";
 import logo11 from "../assets/logos/iurp.webp";
 import logo12 from "../assets/logos/centrorecreativo.webp";
+import { institutions } from "../data/institutions";
+import { Link } from "react-router-dom";
 
 // Array con logo, nombre, eje y tooltip
-const institutions = [
-  { name: "Institución 1", logo: logo1, eje: "formal", tooltip: "Observatorio" },
-  { name: "Institución 2", logo: logo2, eje: "inclusiva", tooltip: "Club" },
-  { name: "Institución 3", logo: logo3, eje: "deportes", tooltip: "Congreso" },
-  { name: "Institución 4", logo: logo4, eje: "trabajo", tooltip: "Concurso" },
-  { name: "Institución 5", logo: logo5, eje: "formal", tooltip: "Instituto" },
-  { name: "Institución 6", logo: logo6, eje: "inclusiva", tooltip: "Programa Porvenir" },
-  { name: "Institución 7", logo: logo7, eje: "deportes", tooltip: "Centro pedagógico" },
-  { name: "Institución 8", logo: logo8, eje: "trabajo", tooltip: "Italia en la patagónia" },
-  { name: "Institución 9", logo: logo9, eje: "formal", tooltip: "Primaria" },
-  { name: "Institución 10", logo: logo10, eje: "inclusiva", tooltip: "Secundaria" },
-  { name: "Institución 11", logo: logo11, eje: "deportes", tooltip: "Instituto Universitario" },
-  { name: "Institución 12", logo: logo12, eje: "trabajo", tooltip: "Centro recreativo" },
-];
+// const institutions = [
+//   { id: 0, name: "Institución 1", logo: logo1, eje: "formal", tooltip: "Observatorio", descripcion: "Institución encargada de proyectar estrategias de inclusión deportiva-educativa efectiva de personas con discapacidad", contacto: "" },
+//   { name: "Institución 2", logo: logo2, eje: "inclusiva", tooltip: "Club" },
+//   { name: "Institución 3", logo: logo3, eje: "deportes", tooltip: "Congreso" },
+//   { name: "Institución 4", logo: logo4, eje: "trabajo", tooltip: "Concurso" },
+//   { name: "Institución 5", logo: logo5, eje: "formal", tooltip: "Instituto" },
+//   { name: "Institución 6", logo: logo6, eje: "inclusiva", tooltip: "Programa Porvenir" },
+//   { name: "Institución 7", logo: logo7, eje: "deportes", tooltip: "Centro pedagógico" },
+//   { name: "Institución 8", logo: logo8, eje: "trabajo", tooltip: "Italia en la patagónia" },
+//   { name: "Institución 9", logo: logo9, eje: "formal", tooltip: "Primaria" },
+//   { name: "Institución 10", logo: logo10, eje: "inclusiva", tooltip: "Secundaria" },
+//   { name: "Institución 11", logo: logo11, eje: "deportes", tooltip: "Instituto Universitario" },
+//   { name: "Institución 12", logo: logo12, eje: "trabajo", tooltip: "Centro recreativo" },
+// ];
 
 
 // Los ejes
@@ -73,6 +75,9 @@ export default function InstitucionesGrid() {
         {/* Grilla instituciones */}
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-0 md:col-span-3 md:px-5">
           {institutions.map((inst, i) => (
+
+         <Link key={inst.id} to={`/institucion/${inst.id}`}>
+
             <div
               key={i}
               className={`relative flex flex-col items-center justify-center h-28 shadow-md
@@ -109,6 +114,7 @@ export default function InstitucionesGrid() {
                 className="relative z-10 max-h-20 object-contain mb-2 transition-transform duration-300 group-hover:scale-110"
               />
             </div>
+            </Link>
           ))}
         </div>
 

@@ -10,7 +10,7 @@ const auspiciantes = [
 
 export default function Auspiciantes() {
   return (
-    <div className="py-10">
+    <div className="mt-30">
       <h2 className="text-2xl md:text-3xl font-bold mb-12 relative text-left">
         <span className="relative inline-block z-10">
             AUSPICIANTES

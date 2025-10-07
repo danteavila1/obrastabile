@@ -2,7 +2,7 @@ import logo from "../assets/fundacionstabilelogo.webp";
 
 export default function Footer() {
 return (
-  <footer className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bg-[#04ab8d] pb-10 pt-20">
+  <footer className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bg-[#04ab8d] pb-10 pt-20 mt-20">
     <div className="container mx-auto">
       <div className="-mx-4 flex flex-wrap justify-center">
         <div className="w-full px-4 sm:w-2/3 lg:w-3/12">

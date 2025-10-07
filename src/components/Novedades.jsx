@@ -35,7 +35,7 @@ const novedades = [
 
 export default function NovedadesSection() {
   return (
-    <section className="relative z-10 pb-20 pt-20 rounded-b-[50px] mt-10">
+    <section className="relative z-10 mt-30 md:mt-40 rounded-b-[50px]">
 
       {/* Título fuera del fondo verde */}
       <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left ">
