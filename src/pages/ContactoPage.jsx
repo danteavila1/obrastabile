@@ -1,6 +1,26 @@
 import bannerContacto from "../assets/imgNovedades/capacitaciones.webp";
+import { useState } from "react";
 
 export default function ContactoPage() {
+    const [enviado, setEnviado] = useState("");
+
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+
+    try {
+      const res = await fetch("/enviar.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      const data = await res.text();
+      setEnviado(data); // mensaje de éxito o error
+      e.target.reset();
+    } catch (err) {
+      setEnviado("Error al enviar el mensaje ❌");
+    }
+  };
   return (
     <div className="relative z-10">
       {/* Banner */}
@@ -75,32 +95,39 @@ export default function ContactoPage() {
       </section>
 
       {/* Formulario */}
-      <section className="relative z-10 max-w-4xl mx-auto px-4 sm:px-8 xl:px-0 mt-16 mb-20">
-        <h2 className="text-2xl font-bold mb-6 text-white">Envíanos un mensaje</h2>
-        <form className="space-y-4">
-          <input
-            type="text"
-            placeholder="Nombre"
-            className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-[#fad016]"
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-[#fad016]"
-          />
-          <textarea
-            placeholder="Mensaje"
-            rows="5"
-            className="w-full p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-[#fad016]"
-          ></textarea>
-          <button
-            type="submit"
-            className="bg-[#04ab8d] hover:bg-[#038c72] text-white font-bold py-3 px-6 rounded-lg shadow-md"
-          >
-            Enviar
-          </button>
-        </form>
-      </section>
+        <div className="md:col-span-2 mt-10">
+          <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
+            <input
+              type="text"
+              name="nombre"
+              placeholder="Tu nombre"
+              required
+              className="w-full p-3 rounded border border-gray-300"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Tu correo"
+              required
+              className="w-full p-3 rounded border border-gray-300"
+            />
+            <textarea
+              name="mensaje"
+              placeholder="Tu mensaje"
+              required
+              className="w-full p-3 rounded border border-gray-300 h-32"
+            />
+            <button
+              type="submit"
+              className="bg-[#04ab8d] text-white px-6 py-3 rounded font-bold hover:bg-[#038f7a]"
+            >
+              Enviar
+            </button>
+          </form>
+          {enviado && (
+            <p className="text-center mt-4 text-white">{enviado}</p>
+          )}
+        </div>
     </div>
   );
 }
