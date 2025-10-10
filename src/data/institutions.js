@@ -11,7 +11,7 @@ import logo9 from "../assets/logos/primaria.webp";
 import logo10 from "../assets/logos/secundario.webp";
 import logo11 from "../assets/logos/iurp.webp";
 import logo12 from "../assets/logos/centrorecreativo.webp";
-import banner1 from "../assets/flags/argentina.webp";
+import banner1 from "../assets/banner/prueba.jpeg";
 
 // Array con logo, nombre, eje y tooltip
 export const institutions = [
@@ -45,12 +45,20 @@ export const institutions = [
   { id:3, 
     name: "Institución 4",
     logo: logo4, 
-    banner: "../assets/flags/argentina.webp",
+    banner: banner1,
     color: "rgba(4, 158, 230, 0.5)",
     eje: "trabajo", 
     tooltip: "Concurso", 
-    descripcion: "Concurso",
-    contacto: "299"},
+    descripcion: "Concurso orientado a Lorem ipsum dolor sit amet consectetur adipiscing elit mauris, a senectus magnis at rhoncus fusce eu taciti, nunc cursus sed erat dictumst risus aliquam. In suspendisse molestie ac mauris varius curabitur justo aliquam, sociosqu turpis mattis taciti lectus dictumst accumsan ad, pretium fames phasellus ligula luctus et risus. Iaculis pharetra pellentesque volutpat ridiculus ac condimentum rutrum fermentum potenti congue dictum sapien, cursus hendrerit odio ultricies turpis lacinia tempor felis in fusce consequat mauris, est nascetur duis imperdiet magna vehicula eros facilisi mattis semper interdum. Fermentum ad lectus risus montes viverra massa, habitant fames aliquet phasellus cubilia proin, eleifend dapibus ac bibendum vulputate. Molestie vulputate tempor cursus vitae facilisi proin penatibus non, class suspendisse laoreet habitasse lectus feugiat vestibulum ut venenatis, id dictum varius nostra nullam cubilia sed. Risus ligula posuere montes dignissim senectus ullamcorper, nostra ultricies sem auctor integer ad, molestie nisi imperdiet consequat non.",
+    contacto: {
+    celular: "299-1234567",
+    mail: "concurso@obrastabile.org",
+    direccion: "Av. Siempre Viva 123, Neuquén",
+    redes: {
+      facebook: "https://facebook.com/concurso",
+      instagram: "https://instagram.com/concurso"
+    }} 
+  },
   { id: 4, 
     name: "Institución 5", 
     logo: logo5, 

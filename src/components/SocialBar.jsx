@@ -22,7 +22,7 @@ export default function SocialBar() {
           <FaInstagram size={20} />
         </a>
         <a
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/fundacionstabile/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-white hover:text-[#fad016] transition-colors"

@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { institutions } from "../data/institutions";
+import NovedadesSection from "../components/Novedades";
 
 export default function InstitucionPage() {
   const { id } = useParams();
@@ -46,18 +47,78 @@ export default function InstitucionPage() {
 
       {/* Contenido */}
       <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
-          <span className="relative">
-            INTRODUCCIÓN
-            <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
-          </span>
-        </h2>
 
-        <p className="text-lg md:text-xl text-gray-200 leading-relaxed pl-4 border-l-4"
-          style={{ borderColor: institucion.color }}
-        >
-          {institucion.descripcion}
-        </p>
+        {/* Introducción */}
+        <div className="mt-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            <span className="relative">
+              INTRODUCCIÓN
+              <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
+            </span>
+          </h2>
+          <p
+            className="text-lg md:text-xl text-gray-200 leading-relaxed pl-4 border-l-4"
+            style={{ borderColor: institucion.color }}
+          >
+            {institucion.descripcion}
+          </p>
+        </div>
+
+        {/* Novedades */}
+        <NovedadesSection institucionId={institucion.id} />
+
+        {/* Contacto */}
+        <div className="mt-10">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+            <span className="relative">
+              CONTACTO
+              <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
+            </span>
+          </h2>
+
+          <div
+            className="space-y-3 text-lg text-gray-200 pl-4 border-l-4"
+            style={{ borderColor: institucion.color }}
+          >
+            {institucion.contacto?.celular && (
+              <p><strong>Celular:</strong> {institucion.contacto.celular}</p>
+            )}
+            {institucion.contacto?.mail && (
+              <p><strong>Email:</strong> {institucion.contacto.mail}</p>
+            )}
+            {institucion.contacto?.direccion && (
+              <p><strong>Dirección:</strong> {institucion.contacto.direccion}</p>
+            )}
+            {institucion.contacto?.redes && (
+              <div>
+                <strong>Redes:</strong>
+                <div className="flex gap-4 mt-2">
+                  {institucion.contacto.redes.facebook && (
+                    <a
+                      href={institucion.contacto.redes.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline"
+                    >
+                      Facebook
+                    </a>
+                  )}
+                  {institucion.contacto.redes.instagram && (
+                    <a
+                      href={institucion.contacto.redes.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 hover:underline"
+                    >
+                      Instagram
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ export default function Header() {
   const flags = {
     es: { img: flagAr, alt: "Español" },
     it: { img: flagIt, alt: "Italiano" },
-    en: { img: flagUs, alt: "English" },
+    en: { img: flagUs, alt: "Ingles" },
   };
 
   const handleLangChange = (lang) => {

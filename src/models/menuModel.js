@@ -1,3 +1,4 @@
+
 export const menuItems = [
   { id: 1, name: "Inicio", path: "/" },
   { id: 2, name: "Nosotros", path: "/nosotros" },

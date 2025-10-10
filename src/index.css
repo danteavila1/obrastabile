@@ -78,3 +78,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+/* ContactoPage */
+.contact-title {
+  font-size: 70px; /* lo que quieras */
+}

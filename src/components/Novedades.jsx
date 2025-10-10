@@ -1,42 +1,46 @@
 import React from "react";
+import { novedades } from "../data/novedades";
 
-const novedades = [
-  {
-    id: 1,
-    categoria: "Club Stábile",
-    color: "purple",
-    titulo: "NUEVO PISO PARA EL GIMNASIO DEL CLUB",
-    descripcion:
-      "El piso del gimnasio de aparatos del Club Stábile fue renovado en su totalidad. La empresa Playcourt proveyó 121m2 de piso liso de dos colores, con lo cual jerarquiza un espacio fundamental utilizado por ciertos de socios que diariamente ejercitan musculación, se preparan para la práctica del automovilismo o complementan sus actividades deportivas",
-    autor: "Actividad física y deporte",
-    fecha: "Sep 20, 2025",
-    imagen: "../src/assets/imgNovedades/gimclubstabile.webp",
-    destacado: true,
-  },
-  {
-    id: 2,
-    categoria: "Jardín de Infantes",
-    color: "blue",
-    titulo: "Nuevo piso para el patio del Jardín de Infantes",
-    autor: "Educación Formal",
-    fecha: "Sep 15, 2025",
-    imagen: "../src/assets/imgNovedades/patiojardin.webp",
-  },
-  {
-    id: 3,
-    categoria: "Instituciones Virgen de Luján",
-    color: "green",
-    titulo: "Febrero: Mes de capacitaciones en la Institución Virgen de Luján",
-    autor: "Educación Formal",
-    fecha: "Sep 10, 2025",
-    imagen: "../src/assets/imgNovedades/capacitaciones.webp",
-  },
-];
+// Importar imágenes
+import gimclubstabile from "../assets/imgNovedades/gimclubstabile.webp";
+import patiojardin from "../assets/imgNovedades/patiojardin.webp";
+import capacitaciones from "../assets/imgNovedades/capacitaciones.webp";
 
-export default function NovedadesSection() {
+export default function NovedadesSection({ institucionId }) {
+  // Mapear imágenes
+  const novedadesConImagenes = novedades.map((item) => {
+    let imagenImport;
+    switch (item.id) {
+      case 1:
+        imagenImport = gimclubstabile;
+        break;
+      case 2:
+        imagenImport = patiojardin;
+        break;
+      case 3:
+        imagenImport = capacitaciones;
+        break;
+      default:
+        imagenImport = item.imagen;
+    }
+    return { ...item, imagen: imagenImport };
+  });
+
+  // Filtrar por institucionId si viene
+  const novedadesFiltradas = institucionId
+    ? novedadesConImagenes.filter((n) => n.institucionId === institucionId)
+    : [...novedadesConImagenes].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 3);
+
+  if (!novedadesFiltradas.length) {
+    return (
+      <p className="text-center text-gray-300 mt-10">
+        No hay novedades por el momento.
+      </p>
+    );
+  }
+
   return (
     <section className="relative z-10 mt-30 md:mt-40 rounded-b-[50px]">
-
       {/* Título fuera del fondo verde */}
       <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left ">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
@@ -52,7 +56,7 @@ export default function NovedadesSection() {
         <div className="mx-auto max-w-6xl px-4 sm:px-8 xl:px-0">
           {/* Contenedor de tarjetas */}
           <div className="flex flex-wrap gap-8">
-            {novedades.map((item) =>
+            {novedadesFiltradas.map((item) =>
               item.destacado ? (
                 // Tarjeta grande
                 <div
@@ -116,5 +120,3 @@ export default function NovedadesSection() {
     </section>
   );
 }
-
-

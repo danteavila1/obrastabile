@@ -8,6 +8,8 @@ import WhatsAppButton from "./components/WhatsAppButton";
 import Auspiciantes from "./components/Auspiciantes";
 import Footer from "./components/Footer";
 import InstitucionPage from "./pages/InstitucionPage";
+import ContactoPage from "./pages/ContactoPage";
+
 
 function App() {
   return (
@@ -26,9 +28,12 @@ function App() {
           }
         />
 
-        {/* Página de una institución */}
-        <Route path="/institucion/:id" element={<InstitucionPage />} />
+      {/* Página de una institución */}
+      <Route path="/institucion/:id" element={<InstitucionPage />} />
+      {/* Página de contacto*/}
+      <Route path="/contacto" element={<ContactoPage />} />
       </Routes>
+      
 
       <Footer />
       <SocialBar />
