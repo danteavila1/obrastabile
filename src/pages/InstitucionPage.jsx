@@ -1,7 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { institutions } from "../data/institutions";
-import NovedadesSection from "../components/Novedades";
+// import NovedadesSection from "../components/Novedades";
+import NovedadesCarrusel from "../components/NovedadesCarrusel";
+
 
 export default function InstitucionPage() {
   const { id } = useParams();
@@ -65,7 +67,7 @@ export default function InstitucionPage() {
         </div>
 
         {/* Novedades */}
-        <NovedadesSection institucionId={institucion.id} />
+        <NovedadesCarrusel institucionId={institucion.id} />
 
         {/* Contacto */}
         <div className="mt-10">
