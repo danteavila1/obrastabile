@@ -9,6 +9,7 @@ import Auspiciantes from "./components/Auspiciantes";
 import Footer from "./components/Footer";
 import InstitucionPage from "./pages/InstitucionPage";
 import ContactoPage from "./pages/ContactoPage";
+import PaginaEnConstruccion from "./pages/PaginaEnConstruccion";
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
       <Route path="/institucion/:id" element={<InstitucionPage />} />
       {/* Página de contacto*/}
       <Route path="/contacto" element={<ContactoPage />} />
+      {/* Página en construcción*/}
+      <Route path="/construccion" element={<PaginaEnConstruccion />} />
       </Routes>
       
 

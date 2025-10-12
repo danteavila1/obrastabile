@@ -5,7 +5,7 @@ import capacitaciones from "../assets/imgNovedades/capacitaciones.webp";
 export const novedades = [
   {
     id: 1,
-    institucionId: 2,
+    institucionId: 3,
     categoria: "Club Stábile",
     color: "purple",
     titulo: "NUEVO PISO PARA EL GIMNASIO DEL CLUB",

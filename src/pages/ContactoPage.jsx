@@ -24,7 +24,7 @@ export default function ContactoPage() {
   return (
     <div className="relative z-10">
       {/* Banner */}
-      <div className="relative left-1/2 -translate-x-1/2 translate-y-9 w-screen bottom-40 md:bottom-30 h-[310px] md:h-[450px] lg:h-[500px]">
+      <div className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bottom-43 md:bottom-38 h-[310px] md:h-[450px] lg:h-[500px] bg-[#04ab8d]">
         <img
           src={bannerContacto}
           alt="Banner Contacto"
@@ -39,7 +39,7 @@ export default function ContactoPage() {
       </div>
 
       {/* Datos + Mapa */}
-      <section className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 xl:px-0 mt-16 grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+      <section className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
         {/* Datos de contacto */}
         <div className="space-y-4 text-gray-200">
           <h2 className="text-2xl font-bold mb-4 text-white">Información</h2>
@@ -95,7 +95,7 @@ export default function ContactoPage() {
       </section>
 
       {/* Formulario */}
-        <div className="md:col-span-2 mt-10">
+        {/* <div className="md:col-span-2 mt-10">
           <form onSubmit={handleSubmit} className="space-y-4 max-w-lg mx-auto">
             <input
               type="text"
@@ -127,7 +127,7 @@ export default function ContactoPage() {
           {enviado && (
             <p className="text-center mt-4 text-white">{enviado}</p>
           )}
-        </div>
+        </div> */}
     </div>
   );
 }

@@ -44,7 +44,7 @@ export default function InstitucionesGrid() {
   const [hoverEje, setHoverEje] = useState(null);
 
   return (
-    <section className="relative mt-15 w-full">
+    <section className="relative mt-5 md:mt-10 w-full">
       {/* Texto de ejes */}
       <h2 className="text-2xl md:text-3xl text-white text-center mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-6 flex-wrap">
         {ejes.map((eje) => (

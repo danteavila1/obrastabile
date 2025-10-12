@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { novedades } from "../data/novedades";
 
 // Importar imágenes
@@ -29,7 +30,9 @@ export default function NovedadesSection({ institucionId }) {
   // Filtrar por institucionId si viene
   const novedadesFiltradas = institucionId
     ? novedadesConImagenes.filter((n) => n.institucionId === institucionId)
-    : [...novedadesConImagenes].sort((a, b) => new Date(b.fecha) - new Date(a.fecha)).slice(0, 3);
+    : [...novedadesConImagenes]
+        .sort((a, b) => new Date(b.fecha) - new Date(a.fecha))
+        .slice(0, 3);
 
   if (!novedadesFiltradas.length) {
     return (
@@ -42,7 +45,7 @@ export default function NovedadesSection({ institucionId }) {
   return (
     <section className="relative z-10 mt-30 md:mt-40 rounded-b-[50px]">
       {/* Título fuera del fondo verde */}
-      <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left ">
+      <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 relative inline-block">
           <span className="relative">
             NOVEDADES
@@ -104,7 +107,9 @@ export default function NovedadesSection({ institucionId }) {
                     >
                       {item.categoria}
                     </span>
-                    <h4 className="font-semibold text-lg mb-3">{item.titulo}</h4>
+                    <h4 className="font-semibold text-lg mb-3">
+                      {item.titulo}
+                    </h4>
                     <div className="flex items-center gap-2 text-sm text-gray-300">
                       <p>{item.autor}</p>
                       <span className="w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
@@ -114,6 +119,16 @@ export default function NovedadesSection({ institucionId }) {
                 </div>
               )
             )}
+          </div>
+
+          {/* Botón Ver más */}
+          <div className="text-center mt-10">
+            <Link
+              to="/construccion"
+              className="inline-block bg-black text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-800 transition duration-300"
+            >
+              Ver más
+            </Link>
           </div>
         </div>
       </div>

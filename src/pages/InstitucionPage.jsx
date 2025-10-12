@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { institutions } from "../data/institutions";
 // import NovedadesSection from "../components/Novedades";
 import NovedadesCarrusel from "../components/NovedadesCarrusel";
+import Basesycondiciones from "../components/Basesycondiciones";
+import basespdf from "../assets/docs/basesycondiciones.pdf"
 
 
 export default function InstitucionPage() {
@@ -27,7 +29,7 @@ export default function InstitucionPage() {
   return (
     <div className="relative">
       {/* Banner */}
-      <div className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bottom-40 md:bottom-30 h-[310px] md:h-[450px] lg:h-[500px] bg-[#04ab8d]">
+      <div className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bottom-43 md:bottom-38 h-[310px] md:h-[450px] lg:h-[500px]">
         <img
           src={institucion.banner}
           alt={`Banner de ${institucion.name}`}
@@ -38,20 +40,20 @@ export default function InstitucionPage() {
           className="absolute inset-0"
           style={{ backgroundColor: institucion.color }}
         ></div>
-        <div className="relative z-10 flex items-center justify-center h-full pt-30 md:pt-19">
+        <div className="relative z-10 flex items-center justify-center h-full pt-25 md:pt-17">
           <img
             src={institucion.logo}
-            alt={institucion.name}
-            className="max-h-34 md:max-h-64 object-contain mx-auto drop-shadow-lg"
+            alt={institucion.name}  
+            className="max-h-54 md:max-h-64 object-contain mx-auto drop-shadow-lg"
           />
         </div>
       </div>
 
       {/* Contenido */}
-      <div className="relative z-10 max-w-6xl px-4 sm:px-8 xl:px-0 text-left">
+      <div className="relative z-10 max-w-6xl text-left bottom-20">
 
         {/* Introducción */}
-        <div className="mt-10">
+        <div className="mt-10 pb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
             <span className="relative">
               INTRODUCCIÓN
@@ -66,11 +68,16 @@ export default function InstitucionPage() {
           </p>
         </div>
 
+        {/* Bases y Condiciones */}
+        <Basesycondiciones
+          color={institucion.color}
+          pdfUrl={basespdf} // ruta a tu PDF
+        />
         {/* Novedades */}
         <NovedadesCarrusel institucionId={institucion.id} />
 
         {/* Contacto */}
-        <div className="mt-10">
+        <div className="mt-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
             <span className="relative">
               CONTACTO
@@ -113,6 +120,16 @@ export default function InstitucionPage() {
                       className="text-pink-400 hover:underline"
                     >
                       Instagram
+                    </a>
+                  )}
+                  {institucion.contacto.redes.linkedIn && (
+                    <a
+                      href={institucion.contacto.redes.linkedIn}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-pink-400 hover:underline"
+                    >
+                      LinkedIn
                     </a>
                   )}
                 </div>

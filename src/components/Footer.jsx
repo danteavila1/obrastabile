@@ -1,8 +1,9 @@
 import logo from "../assets/fundacionstabilelogo.webp";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
 return (
-  <footer className="relative z-10 left-1/2 -translate-x-1/2 translate-y-9 w-screen bg-[#04ab8d] pb-10 pt-20 mt-20">
+  <footer className="relative z-10 left-1/2 -translate-x-1/2 translate-y-16 w-screen bg-[#04ab8d] pb-18 pt-20">
     <div className="container mx-auto">
       <div className="-mx-4 flex flex-wrap justify-center">
         <div className="w-full px-4 sm:w-2/3 lg:w-3/12">
@@ -17,97 +18,47 @@ return (
         <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div className="mb-10 w-full">
             <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              Resources
+              Enlaces rápidos
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="javascript:void(0)"
+                <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  SaaS Development
+                  Quiénes somos
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Our Products
+                  Publicaciones
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  User Flow
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  User Strategy
+                  Novedades
                 </a>
               </li>
             </ul>
           </div>
         </div>
+      
         <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div className="mb-10 w-full">
             <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              Company
-            </h4>
-            <ul class="space-y-3">
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  About TailGrids
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Contact & Support
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Success History
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Setting & Privacy
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
-          <div className="mb-10 w-full">
-            <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              Quick Links
+              Donaciones / Cómo apoyar
             </h4>
             <ul className="space-y-3">
               <li>
-                <a href="javascript:void(0)"
+                <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Premium Support
+                  Enlace para donaciones
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)"
+                <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Our Services
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Know Our Team
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)"
-                  className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Download App
+                  Información bancaria o formas de aporte
                 </a>
               </li>
             </ul>
@@ -167,10 +118,46 @@ return (
                   </defs>
                 </svg>
               </span>
-              <span>+54 299 659 6682</span>
+              <a
+                href="https://wa.me/5492996596682"
+                className="hover:text-primary transition"
+              >
+                +54 299 659 6682
+              </a>
             </p>
-            <p className="text-base text-body-color dark:text-dark-6">
-              &copy; 2025 Obra Stábile
+            {/* Correo electrónico */}
+            <p className="flex items-center justify-center text-sm font-medium text-dark dark:text-white mt-2">
+              <span className="mr-3 text-primary">
+                {/* Ícono de email */}
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M22 6L12 13L2 6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </span>
+              <a
+                href="mailto:obrastabile@gmail.com"
+                className="hover:text-primary transition"
+              >
+                obrastabile@gmail.com
+              </a>
             </p>
           </div>
         </div>
