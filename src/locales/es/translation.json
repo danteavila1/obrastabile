@@ -55,7 +55,13 @@
   },
   "institucion": {
     "enconstruccion": "Página en construcción 🚧",
-    "introduccion": "INTRODUCCIÓN"
+    "introduccion": "INTRODUCCIÓN",
+    "objetivos_titulo": "OBJETIVOS",
+    "ejes_titulo": "EJES",
+    "destinatarios_titulo": "DESTINATARIOS",
+    "objetivos": "• Incentivar y dar a conocer acciones, procesos o iniciativas innovadores y exitosos que estén orientadas hacia las personas con desafíos en el aprendizaje y sus oportunidades educativas.\n• Promover y difundir la implementación de Buenas Prácticas en Educación Inclusiva.\n• Favorecer el intercambio entre instituciones y distintos actores sociales a fin de promover el diseño, la planificación y la ejecución de Buenas Prácticas, entendiendo la inclusión educativa y social como un compromiso de todos.",
+    "ejes": "• Buenas Prácticas Institucionales Inclusivas (proyectos, prácticas áulicas, etc.).\n• Buenas Prácticas en Educación Física y Deporte.\n• Buenas Prácticas en Procesos de Formación para el Empleo y la Inclusión Laboral.",
+    "destinatarios": "Profesionales de la educación, equipos interdisciplinarios, instituciones y estudiantes avanzados de carreras afines de Argentina y otros países de habla hispana que puedan acreditar participación efectiva en una práctica aplicada."
   }
 
 

@@ -75,6 +75,12 @@
   },
   "institucion": {
     "enconstruccion": "Pagina in costruzione 🚧",
-    "introduccion": "INTRODUZIONE"
+    "introduccion": "INTRODUZIONE",
+    "objetivos_titulo": "OBIETTIVI",
+    "ejes_titulo": "ASSI",
+    "destinatarios_titulo": "DESTINATARI",
+    "objetivos": "• Incentivare e far conoscere azioni, processi o iniziative innovative e di successo rivolte alle persone con difficoltà di apprendimento e alle loro opportunità educative.\n• Promuovere e diffondere l’attuazione di Buone Pratiche nell’Educazione Inclusiva.\n• Favorire lo scambio tra istituzioni e diversi attori sociali al fine di promuovere la progettazione, la pianificazione e l’esecuzione di Buone Pratiche, comprendendo l’inclusione educativa e sociale come un impegno condiviso.",
+    "ejes": "• Buone Pratiche Istituzionali Inclusive (progetti, pratiche in aula, ecc.).\n• Buone Pratiche nell’Educazione Fisica e nello Sport.\n• Buone Pratiche nei Processi di Formazione per l’Impiego e l’Inclusione Lavorativa.",
+    "destinatarios": "Professionisti dell’educazione, équipe interdisciplinari, istituzioni e studenti avanzati di corsi affini in Argentina e in altri paesi di lingua spagnola che possano dimostrare una partecipazione effettiva in una pratica applicata."
   }
 }

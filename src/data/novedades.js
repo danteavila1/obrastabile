@@ -5,7 +5,7 @@ import capacitaciones from "../assets/imgNovedades/capacitaciones.webp";
 export const novedades = [
   {
     id: 1,
-    institucionId: 3,
+    institucionId: 2,
     categoria: "Club Stábile",
     color: "purple",
     tituloKey: "nuevoPisoGimnasio",
@@ -17,7 +17,7 @@ export const novedades = [
   },
   {
     id: 2,
-    institucionId: 3,
+    institucionId: 2,
     categoria: "Jardín de Infantes",
     color: "blue",
     tituloKey: "nuevoPisoPatio",
@@ -28,7 +28,7 @@ export const novedades = [
   },
   {
     id: 3,
-    institucionId: 3,
+    institucionId: 2,
     categoria: "Instituciones Virgen de Luján",
     color: "green",
     tituloKey: "mesCapacitaciones",

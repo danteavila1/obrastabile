@@ -55,6 +55,12 @@
   },
   "institucion": {
     "enconstruccion": "Page under construction 🚧",
-    "introduccion": "INTRODUCTION"
+    "introduccion": "INTRODUCTION",
+    "objetivos_titulo": "OBJECTIVES",
+    "ejes_titulo": "AXES",
+    "destinatarios_titulo": "TARGET GROUP",
+    "objetivos": "• Encourage and promote awareness of innovative and successful actions, processes or initiatives aimed at people with learning challenges and their educational opportunities.\n• Promote and disseminate the implementation of Good Practices in Inclusive Education.\n• Foster exchange between institutions and various social actors to promote the design, planning and implementation of Good Practices, understanding educational and social inclusion as a shared commitment.",
+    "ejes": "• Inclusive Institutional Good Practices (projects, classroom practices, etc.).\n• Good Practices in Physical Education and Sports.\n• Good Practices in Training Processes for Employment and Labor Inclusion.",
+    "destinatarios": "Education professionals, interdisciplinary teams, institutions, and advanced students from related fields in Argentina and other Spanish-speaking countries who can demonstrate active participation in an applied practice."
   }
 }

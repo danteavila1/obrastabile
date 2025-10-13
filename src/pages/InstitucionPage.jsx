@@ -1,12 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { institutions } from "../data/institutions";
-// import NovedadesSection from "../components/Novedades";
 import NovedadesCarrusel from "../components/NovedadesCarrusel";
 import Basesycondiciones from "../components/Basesycondiciones";
-import basespdf from "../assets/docs/basesycondiciones.pdf"
+import basespdf from "../assets/docs/basesycondiciones.pdf";
 import { useTranslation } from "react-i18next";
-
 
 export default function InstitucionPage() {
   const { t } = useTranslation();
@@ -16,7 +14,6 @@ export default function InstitucionPage() {
   if (!institucion)
     return <p className="text-white text-center mt-10">Institución no encontrada</p>;
 
-  // 🔹 Solo la institución "Concurso" (id 3) tendrá página lista
   const isConcurso = institucion.id === 3;
 
   if (!isConcurso) {
@@ -27,7 +24,6 @@ export default function InstitucionPage() {
     );
   }
 
-  // 🔹 Página del Concurso (terminada)
   return (
     <div className="relative">
       {/* Banner */}
@@ -37,7 +33,6 @@ export default function InstitucionPage() {
           alt={`Banner de ${institucion.name}`}
           className="absolute inset-0 w-full h-full object-cover"
         />
-        {/* Overlay con color */}
         <div
           className="absolute inset-0"
           style={{ backgroundColor: institucion.color }}
@@ -45,7 +40,7 @@ export default function InstitucionPage() {
         <div className="relative z-10 flex items-center justify-center h-full pt-25 md:pt-17">
           <img
             src={institucion.logo}
-            alt={institucion.name}  
+            alt={institucion.name}
             className="max-h-54 md:max-h-64 object-contain mx-auto drop-shadow-lg"
           />
         </div>
@@ -53,28 +48,29 @@ export default function InstitucionPage() {
 
       {/* Contenido */}
       <div className="relative z-10 max-w-6xl text-left bottom-20">
-
         {/* Introducción */}
-        <div className="mt-10 pb-10">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
-            <span className="relative">
-              {t("institucion.introduccion")}
-              <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
-            </span>
-          </h2>
-          <p
-            className="text-lg md:text-xl text-gray-200 leading-relaxed pl-4 border-l-4"
-            style={{ borderColor: institucion.color }}
-          >
-            {institucion.descripcion}
-          </p>
-        </div>
+        <Section title={t("institucion.introduccion")} color={institucion.color}>
+          {institucion.descripcion}
+        </Section>
+
+        {/* OBJETIVOS */}
+        <Section title={t("institucion.objetivos_titulo")} color={institucion.color}>
+          {t("institucion.objetivos")}
+        </Section>
+
+        {/* EJES */}
+        <Section title={t("institucion.ejes_titulo")} color={institucion.color}>
+          {t("institucion.ejes")}
+        </Section>
+
+        {/* DESTINATARIOS */}
+        <Section title={t("institucion.destinatarios_titulo")} color={institucion.color}>
+          {t("institucion.destinatarios")}
+        </Section>
 
         {/* Bases y Condiciones */}
-        <Basesycondiciones
-          color={institucion.color}
-          pdfUrl={basespdf} // ruta a tu PDF
-        />
+        <Basesycondiciones color={institucion.color} pdfUrl={basespdf} />
+
         {/* Novedades */}
         <NovedadesCarrusel institucionId={institucion.id} />
 
@@ -139,9 +135,27 @@ export default function InstitucionPage() {
             )}
           </div>
         </div>
-
       </div>
     </div>
   );
 }
 
+// 🔹 Componente reutilizable para secciones
+function Section({ title, color, children }) {
+  return (
+    <div className="mt-10 pb-10">
+      <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+        <span className="relative">
+          {title}
+          <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
+        </span>
+      </h2>
+      <p
+        className="text-lg md:text-xl text-gray-200 leading-relaxed pl-4 border-l-4 whitespace-pre-line"
+        style={{ borderColor: color }}
+      >
+        {children}
+      </p>
+    </div>
+  );
+}

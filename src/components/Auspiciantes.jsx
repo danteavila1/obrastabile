@@ -1,12 +1,17 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
+import bacssa from "../assets/imgAuspiciantes/bacssa.webp";
+import centenario from "../assets/imgAuspiciantes/centenario.webp";
+import mauad from "../assets/imgAuspiciantes/mauad.webp";
+import ops from "../assets/imgAuspiciantes/ops.webp";
+import uca from "../assets/imgAuspiciantes/uca.webp";
 
 const auspiciantes = [
-  { id: 1, logo: "/src/assets/imgAuspiciantes/bacssa.webp" },
-  { id: 2, logo: "/src/assets/imgAuspiciantes/centenario.webp" },
-  { id: 3, logo: "/src/assets/imgAuspiciantes/mauad.webp" },
-  { id: 4, logo: "/src/assets/imgAuspiciantes/ops.webp" },
-  { id: 5, logo: "/src/assets/imgAuspiciantes/uca.webp" },
+  { id: 1, logo: bacssa },
+  { id: 2, logo: centenario },
+  { id: 3, logo: mauad },
+  { id: 4, logo: ops },
+  { id: 5, logo: uca },
 ];
 
 export default function Auspiciantes() {
