@@ -1,7 +1,9 @@
 import logo from "../assets/fundacionstabilelogo.webp";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
+  const { t } = useTranslation();
 return (
   <footer className="relative z-10 left-1/2 -translate-x-1/2 translate-y-16 w-screen bg-[#04ab8d] pb-18 pt-20">
     <div className="container mx-auto">
@@ -18,25 +20,25 @@ return (
         <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div className="mb-10 w-full">
             <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              Enlaces rápidos
+              {t("footer.enlacesRapidos")}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Quiénes somos
+                  {t("footer.quienesSomos")}
                 </a>
               </li>
               <li>
                 <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Publicaciones
+                  {t("footer.quienesSomos")}
                 </a>
               </li>
               <li>
                 <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Novedades
+                  {t("footer.novedades")}
                 </a>
               </li>
             </ul>
@@ -46,19 +48,19 @@ return (
         <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div className="mb-10 w-full">
             <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              Donaciones / Cómo apoyar
+              {t("footer.novedades")}
             </h4>
             <ul className="space-y-3">
               <li>
                 <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Enlace para donaciones
+                   {t("footer.enlaceDonaciones")}
                 </a>
               </li>
               <li>
                 <a href="/construccion"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
-                  Información bancaria o formas de aporte
+                  {t("footer.infoBancaria")}
                 </a>
               </li>
             </ul>
@@ -66,7 +68,7 @@ return (
         </div>
         <div className="w-full px-4 sm:w-1/2 lg:w-3/12">
           <div className="mb-10 w-full">
-            <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">¡Seguinos!</h4>
+            <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white"> {t("footer.seguinos")}</h4>
             <div className="mb-6 flex items-center justify-center">
               <a href="https://www.facebook.com/profile.php?id=61572605158767"
               target="_blank" 

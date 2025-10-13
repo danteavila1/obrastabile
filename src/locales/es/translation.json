@@ -1,0 +1,62 @@
+{
+  "menu": {
+    "inicio": "Inicio",
+    "nosotros": "Nosotros",
+    "albergue": "Albergue",
+    "contacto": "Contacto"
+  },
+  "ejes": {
+    "formal": "EDUCACIÓN FORMAL - ",
+    "inclusiva": "EDUCACIÓN INCLUSIVA - ",
+    "deportes": "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES - ",
+    "trabajo": "EDUCACIÓN Y TRABAJO."
+  },
+   "novedades": {
+    "titulo": "NOVEDADES",
+    "noHay": "No hay novedades por el momento.",
+    "verMas": "Ver más",
+    "titulos": {
+      "nuevoPisoGimnasio": "NUEVO PISO PARA EL GIMNASIO DEL CLUB",
+      "nuevoPisoPatio": "Nuevo piso para el patio del Jardín de Infantes",
+      "mesCapacitaciones": "Febrero: Mes de capacitaciones en la Institución Virgen de Luján"
+    },
+    "descripciones": {
+      "descPisoGimnasio": "El piso del gimnasio de aparatos del Club Stábile fue renovado en su totalidad. La empresa Playcourt proveyó 121m2 de piso liso de dos colores...",
+      "descPisoPatio": "Se renovó el piso del patio del Jardín de Infantes con materiales seguros y resistentes.",
+      "descMesCapacitaciones": "Programas de capacitación y formación durante el mes de febrero en la Institución Virgen de Luján."
+    },
+    "autores": {
+      "autorDeporte": "Actividad física y deporte",
+      "autorEducacionFormal": "Educación Formal"
+    }
+  },
+  "auspiciantes": "AUSPICIANTES",
+  "footer": {
+    "enlacesRapidos": "Enlaces rápidos",
+    "quienesSomos": "Quiénes somos",
+    "publicaciones": "Publicaciones",
+    "novedades": "Novedades",
+    "donaciones": "Donaciones / Cómo apoyar",
+    "enlaceDonaciones": "Enlace para donaciones",
+    "infoBancaria": "Información bancaria o formas de aporte",
+    "seguinos": "¡Seguinos!"
+  },
+  "contacto": {
+    "titulo": "CONTACTO",
+    "celular": "Celular",
+    "email": "Email",
+    "direccion": "Dirección",
+    "redes": "Redes"
+  },
+  "bases": {
+    "title": "BASES Y CONDICIONES",
+    "description": "Podés consultar o descargar el documento completo con las bases y condiciones del concurso desde el siguiente enlace:",
+    "button": "📄 Descargar Bases y Condiciones (PDF)"
+  },
+  "institucion": {
+    "enconstruccion": "Página en construcción 🚧",
+    "introduccion": "INTRODUCCIÓN"
+  }
+
+
+}

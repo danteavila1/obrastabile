@@ -1,8 +1,10 @@
 import bannerContacto from "../assets/imgNovedades/capacitaciones.webp";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function ContactoPage() {
     const [enviado, setEnviado] = useState("");
+    const { t } = useTranslation();
 
     const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +35,7 @@ export default function ContactoPage() {
         <div className="absolute inset-0 bg-[#fad016] opacity-50"></div>
         <div className="relative z-10 flex items-center justify-center h-full">
           <h1 className="text-white text-5xl md:text-7xl font-bold drop-shadow-lg">
-            CONTACTO
+             {t("contacto.titulo")}
           </h1>
         </div>
       </div>
@@ -42,12 +44,12 @@ export default function ContactoPage() {
       <section className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
         {/* Datos de contacto */}
         <div className="space-y-4 text-gray-200">
-          <h2 className="text-2xl font-bold mb-4 text-white">Información</h2>
-          <p><strong>Teléfono:</strong> +54 (299) 659-6682</p>
+          <h2 className="text-2xl font-bold mb-4 text-white">{t("contacto.titulo")}</h2>
+          <p><strong>{t("contacto.celular")}:</strong> +54 (299) 659-6682</p>
           <p><strong>Email:</strong> obrastabile@gmail.com</p>
-          <p><strong>Dirección:</strong> Intendente Pons Nº 160 – Centenario - Provincia de Neuquén (8309)</p>
+          <p><strong>{t("contacto.direccion")}:</strong> Intendente Pons Nº 160 – Centenario - Provincia de Neuquén (8309)</p>
           <div>
-            <strong>Redes:</strong>
+            <strong>{t("contacto.redes")}:</strong>
             <div className="mt-3 flex">
               <a href="https://www.facebook.com/profile.php?id=61572605158767"
               target="_blank" 

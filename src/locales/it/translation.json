@@ -1,0 +1,80 @@
+{
+  "menu": {
+    "inicio": "Home",
+    "nosotros": "Chi Siamo",
+    "albergue": "Ostello",
+    "contacto": "Contatto"
+  },
+  "ejes": {
+    "formal": "ISTRUZIONE FORMALE - ",
+    "inclusiva": "ISTRUZIONE INCLUSIVA - ",
+    "deportes": "ATTIVITÀ FISICA E SPORTIVA - ",
+    "trabajo": "ISTRUZIONE E LAVORO."
+  },
+  "novedades": {
+    "titulo": "NOVITÀ",
+    "noHay": "Non ci sono novità al momento.",
+    "verMas": "Vedi di più",
+    "categorias": {
+      "deportes": "Sport",
+      "educacion": "Educazione",
+      "capacitacion": "Formazione"
+    },
+    "titulos": {
+      "gimnasioClubStabile": "Palestra Club Stabile",
+      "patioJardin": "Cortile e Giardino",
+      "capacitaciones": "Formazioni 2025"
+    },
+    "descripciones": {
+      "gimnasioClubStabile": "Aggiornamenti sulle attività sportive del Club Stabile.",
+      "patioJardin": "Miglioramenti e novità del cortile e giardino delle nostre istituzioni.",
+      "capacitaciones": "Programmi di formazione per insegnanti e personale."
+    }
+  },
+  "novedades": {
+    "titulo": "NOVITÀ",
+    "noHay": "Non ci sono novità al momento.",
+    "verMas": "Vedi di più",
+    "titulos": {
+      "nuevoPisoGimnasio": "NUOVO PAVIMENTO PER LA PALESTRA DEL CLUB",
+      "nuevoPisoPatio": "Nuovo pavimento per il cortile della scuola dell'infanzia",
+      "mesCapacitaciones": "Febbraio: Mese di formazione nell'Istituzione Vergine di Luján"
+    },
+    "descripciones": {
+      "descPisoGimnasio": "Il pavimento della palestra del Club Stábile è stato completamente rinnovato. Playcourt ha fornito 121 m2 di pavimento liscio a due colori...",
+      "descPisoPatio": "Il pavimento del cortile della scuola dell'infanzia è stato rinnovato con materiali sicuri e resistenti.",
+      "descMesCapacitaciones": "Programmi di formazione durante il mese di febbraio presso l'Istituzione Vergine di Luján."
+    },
+    "autores": {
+      "autorDeporte": "Attività fisica e sport",
+      "autorEducacionFormal": "Educazione Formale"
+    }
+  },
+  "auspiciantes": "SPONSOR",
+  "footer": {
+    "enlacesRapidos": "Link rapidi",
+    "quienesSomos": "Chi siamo",
+    "publicaciones": "Pubblicazioni",
+    "novedades": "Novità",
+    "donaciones": "Donazioni / Come supportare",
+    "enlaceDonaciones": "Link per donazioni",
+    "infoBancaria": "Informazioni bancarie o modalità di contributo",
+    "seguinos": "Seguici!"
+  },
+   "contacto": {
+    "titulo": "CONTATTO",
+    "celular": "CONTATTO",
+    "email": "Email:",
+    "direccion": "Indirizzo:",
+    "redes": "Reti sociali:"
+  },
+  "bases": {
+    "title": "TERMINI E CONDIZIONI",
+    "description": "Puoi consultare o scaricare il documento completo con i termini e le condizioni del concorso dal seguente link:",
+    "button": "📄 Scarica Termini e Condizioni (PDF)"
+  },
+  "institucion": {
+    "enconstruccion": "Pagina in costruzione 🚧",
+    "introduccion": "INTRODUZIONE"
+  }
+}

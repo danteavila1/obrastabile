@@ -5,9 +5,11 @@ import { institutions } from "../data/institutions";
 import NovedadesCarrusel from "../components/NovedadesCarrusel";
 import Basesycondiciones from "../components/Basesycondiciones";
 import basespdf from "../assets/docs/basesycondiciones.pdf"
+import { useTranslation } from "react-i18next";
 
 
 export default function InstitucionPage() {
+  const { t } = useTranslation();
   const { id } = useParams();
   const institucion = institutions.find((inst) => inst.id.toString() === id);
 
@@ -20,7 +22,7 @@ export default function InstitucionPage() {
   if (!isConcurso) {
     return (
       <div className="flex flex-col items-center justify-center h-[60vh] text-center">
-        <p className="text-gray-300 text-lg">Página en construcción 🚧</p>
+        <p className="text-gray-300 text-lg">{t("institucion.enconstruccion")}</p>
       </div>
     );
   }
@@ -56,7 +58,7 @@ export default function InstitucionPage() {
         <div className="mt-10 pb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
             <span className="relative">
-              INTRODUCCIÓN
+              {t("institucion.introduccion")}
               <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
             </span>
           </h2>
@@ -80,7 +82,7 @@ export default function InstitucionPage() {
         <div className="mt-20">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
             <span className="relative">
-              CONTACTO
+              {t("contacto.titulo")}
               <span className="absolute left-0 top-7 -translate-y-1/2 w-full h-5 bg-[#04ab8d] -z-10"></span>
             </span>
           </h2>
@@ -90,17 +92,17 @@ export default function InstitucionPage() {
             style={{ borderColor: institucion.color }}
           >
             {institucion.contacto?.celular && (
-              <p><strong>Celular:</strong> {institucion.contacto.celular}</p>
+              <p><strong>{t("contacto.celular")}:</strong> {institucion.contacto.celular}</p>
             )}
             {institucion.contacto?.mail && (
               <p><strong>Email:</strong> {institucion.contacto.mail}</p>
             )}
             {institucion.contacto?.direccion && (
-              <p><strong>Dirección:</strong> {institucion.contacto.direccion}</p>
+              <p><strong>{t("contacto.direccion")}:</strong> {institucion.contacto.direccion}</p>
             )}
             {institucion.contacto?.redes && (
               <div>
-                <strong>Redes:</strong>
+                <strong>{t("contacto.redes")}:</strong>
                 <div className="flex gap-4 mt-2">
                   {institucion.contacto.redes.facebook && (
                     <a

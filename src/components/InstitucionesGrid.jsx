@@ -14,33 +14,19 @@ import logo11 from "../assets/logos/iurp.webp";
 import logo12 from "../assets/logos/centrorecreativo.webp";
 import { institutions } from "../data/institutions";
 import { Link } from "react-router-dom";
-
-// Array con logo, nombre, eje y tooltip
-// const institutions = [
-//   { id: 0, name: "Institución 1", logo: logo1, eje: "formal", tooltip: "Observatorio", descripcion: "Institución encargada de proyectar estrategias de inclusión deportiva-educativa efectiva de personas con discapacidad", contacto: "" },
-//   { name: "Institución 2", logo: logo2, eje: "inclusiva", tooltip: "Club" },
-//   { name: "Institución 3", logo: logo3, eje: "deportes", tooltip: "Congreso" },
-//   { name: "Institución 4", logo: logo4, eje: "trabajo", tooltip: "Concurso" },
-//   { name: "Institución 5", logo: logo5, eje: "formal", tooltip: "Instituto" },
-//   { name: "Institución 6", logo: logo6, eje: "inclusiva", tooltip: "Programa Porvenir" },
-//   { name: "Institución 7", logo: logo7, eje: "deportes", tooltip: "Centro pedagógico" },
-//   { name: "Institución 8", logo: logo8, eje: "trabajo", tooltip: "Italia en la patagónia" },
-//   { name: "Institución 9", logo: logo9, eje: "formal", tooltip: "Primaria" },
-//   { name: "Institución 10", logo: logo10, eje: "inclusiva", tooltip: "Secundaria" },
-//   { name: "Institución 11", logo: logo11, eje: "deportes", tooltip: "Instituto Universitario" },
-//   { name: "Institución 12", logo: logo12, eje: "trabajo", tooltip: "Centro recreativo" },
-// ];
+import { useTranslation } from "react-i18next";
 
 
 // Los ejes
 const ejes = [
-  { key: "formal", label: "EDUCACIÓN FORMAL - " },
-  { key: "inclusiva", label: "EDUCACIÓN INCLUSIVA - " },
-  { key: "deportes", label: "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES - " },
-  { key: "trabajo", label: "EDUCACIÓN Y TRABAJO." },
+  { key: "formal"},
+  { key: "inclusiva"},
+  { key: "deportes"},
+  { key: "trabajo"},
 ];
 
 export default function InstitucionesGrid() {
+  const { t } = useTranslation();
   const [hoverEje, setHoverEje] = useState(null);
 
   return (
@@ -56,7 +42,7 @@ export default function InstitucionesGrid() {
               hoverEje === eje.key ? "text-[#fad016]" : "text-white"
             }`}
           >
-            {eje.label}
+            {t(`ejes.${eje.key}`)}
           </span>
         ))}
       </h2>
