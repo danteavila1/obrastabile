@@ -1,41 +1,18 @@
 import gimclubstabile from "../assets/imgNovedades/gimclubstabile.webp";
-import patiojardin from "../assets/imgNovedades/patiojardin.webp";
-import capacitaciones from "../assets/imgNovedades/capacitaciones.webp";
+
 
 export const novedades = [
   {
     id: 1,
-    institucionId: 2,
-    categoria: "Club Stábile",
+    institucionId: 3,
+    categoria: "Concurso Buenas Prácticas de Inclusión en Educación",
     color: "purple",
-    tituloKey: "nuevoPisoGimnasio",
-    descripcionKey: "descPisoGimnasio",
-    autorKey: "autorDeporte",
-    fecha: "Sep 20, 2025",
-    imagen: gimclubstabile,
+    tituloKey: "concurso21-10-25",
+    descripcionKey: "descconcurso21-10-25",
+    autorKey: "autorInclusiva",
+    fecha: "Oct 21, 2025",
+    imagen: [gimclubstabile, gimclubstabile],
     destacado: true,
-  },
-  {
-    id: 2,
-    institucionId: 2,
-    categoria: "Jardín de Infantes",
-    color: "blue",
-    tituloKey: "nuevoPisoPatio",
-    descripcionKey: "descPisoPatio",
-    autorKey: "autorEducacionFormal",
-    fecha: "Sep 15, 2025",
-    imagen: patiojardin,
-  },
-  {
-    id: 3,
-    institucionId: 2,
-    categoria: "Instituciones Virgen de Luján",
-    color: "green",
-    tituloKey: "mesCapacitaciones",
-    descripcionKey: "descMesCapacitaciones",
-    autorKey: "autorEducacionFormal",
-    fecha: "Sep 10, 2025",
-    imagen: capacitaciones,
   },
 ];
 

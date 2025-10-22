@@ -11,25 +11,35 @@
     "deportes": "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES - ",
     "trabajo": "EDUCACIÓN Y TRABAJO."
   },
-   "novedades": {
+
+
+  "novedades": {
     "titulo": "NOVEDADES",
     "noHay": "No hay novedades por el momento.",
     "verMas": "Ver más",
+    "volver": "Volver a novedades",
+    "noEncontrada": "No se encontró la novedad solicitada.",
+    "filtros": {
+      "todasCategorias": "Todas las instituciones",
+      "buscarPlaceholder": "Buscar por título...",
+      "masRecientes": "Más recientes",
+      "masAntiguas": "Más antiguas"
+    },
     "titulos": {
-      "nuevoPisoGimnasio": "NUEVO PISO PARA EL GIMNASIO DEL CLUB",
-      "nuevoPisoPatio": "Nuevo piso para el patio del Jardín de Infantes",
-      "mesCapacitaciones": "Febrero: Mes de capacitaciones en la Institución Virgen de Luján"
+      "concurso21-10-25": "LANZAMIENTO DEL CONCURSO BUENAS PRÁCTICAS DE INCLUSIÓN EN EDUCACIÓN"
     },
     "descripciones": {
-      "descPisoGimnasio": "El piso del gimnasio de aparatos del Club Stábile fue renovado en su totalidad. La empresa Playcourt proveyó 121m2 de piso liso de dos colores...",
-      "descPisoPatio": "Se renovó el piso del patio del Jardín de Infantes con materiales seguros y resistentes.",
-      "descMesCapacitaciones": "Programas de capacitación y formación durante el mes de febrero en la Institución Virgen de Luján."
+      "descconcurso21-10-25": "El viernes 3 de octubre de 2025 se realizó el Acto de Lanzamiento del Concurso Buenas Prácticas de Inclusión en Educación.\nEl certamen busca promover, difundir y premiar las buenas prácticas en el ámbito educativo. Un método, acción o técnica que muestra resultados positivos y permite que todas las personas alcancen su máximo potencial, más allá de sus diferencias. Está dirigido a profesionales de la educación, equipos interdisciplinarios, instituciones educativas, estudiantes avanzados y organizaciones de educación no formal, tanto de Argentina como de otros países de habla hispana.\nLas propuestas podrán orientarse según tres ejes: prácticas institucionales y áulicas; educación física y deporte; y formación para el empleo e inclusión laboral. Un Jurado de especialistas evaluará las experiencias según su impacto, pertinencia, originalidad y articulación en red.\nLa publicación de los resultados está prevista para abril de 2026. Los primeros premios (1° y 2°) tendrán un reconocimiento económico y los trabajos destacados (del 1° a 5°) serán presentados en el marco del V Congreso de Inclusión Educativa.\nEl Concurso cuenta con el patrocinio de OPS, Hotel Global, Farmacias Global, Municipalidad de Plaza Huincul, Ingeniería SIMA, McDonald’s, BACSSA, MAUAD y Logos. "
     },
     "autores": {
       "autorDeporte": "Actividad física y deporte",
-      "autorEducacionFormal": "Educación Formal"
+      "autorEducacionFormal": "Educación formal",
+      "autorInclusiva": "Educación inclusiva"
     }
   },
+
+
+
   "auspiciantes": "AUSPICIANTES",
   "footer": {
     "enlacesRapidos": "Enlaces rápidos",

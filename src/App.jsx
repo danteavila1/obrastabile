@@ -10,7 +10,8 @@ import Footer from "./components/Footer";
 import InstitucionPage from "./pages/InstitucionPage";
 import ContactoPage from "./pages/ContactoPage";
 import PaginaEnConstruccion from "./pages/PaginaEnConstruccion";
-
+import NovedadesPage from "./pages/NovedadesPage";
+import NovedadPage from "./pages/NovedadPage";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
       <Route path="/contacto" element={<ContactoPage />} />
       {/* Página en construcción*/}
       <Route path="/construccion" element={<PaginaEnConstruccion />} />
+      {/* Página en novedades*/}
+      <Route path="/novedades" element={<NovedadesPage />} />
+      <Route path="/novedades/:id" element={<NovedadPage />} />
       </Routes>
       
 

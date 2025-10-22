@@ -15,20 +15,30 @@
     "titulo": "NEWS",
     "noHay": "There are no news at the moment.",
     "verMas": "See more",
+    "volver": "Back to news",
+    "noEncontrada": "The requested news item was not found.",
+    "filtros": {
+      "todasCategorias": "All institutions",
+      "buscarPlaceholder": "Search by title...",
+      "masRecientes": "Most recent",
+      "masAntiguas": "Oldest first"
+    },
     "titulos": {
-      "nuevoPisoGimnasio": "NEW FLOOR FOR THE CLUB GYM",
-      "nuevoPisoPatio": "New floor for the Kindergarten patio",
-      "mesCapacitaciones": "February: Training month at Virgen de Luján Institution"
+      "concurso21-10-25": "NEW FLOOR FOR THE CLUB GYM"
     },
     "descripciones": {
-      "descPisoGimnasio": "The floor of the Club Stábile gym was completely renovated. Playcourt provided 121m2 of smooth two-color flooring...",
-      "descPisoPatio": "The kindergarten patio floor was renovated with safe and durable materials.",
-      "descMesCapacitaciones": "Training programs during February at Virgen de Luján Institution."
+
     },
     "autores": {
       "autorDeporte": "Physical activity and sport",
-      "autorEducacionFormal": "Formal Education"
-    }
+      "autorEducacionFormal": "Formal education",
+      "autorInclusiva": "Inclusive education"
+    },
+    "instituciones": {
+    "obraStabile": "Obra Stábile",
+    "clubStabile": "Club Stábile",
+    "observatorio": "Observatory of Education, Accessibility and Inclusion"
+  }
   },
   "auspiciantes": "SPONSORS",
   "footer": {
@@ -45,8 +55,8 @@
     "titulo": "CONTACT",
     "celular": "Phone:",
     "email": "Email:",
-    "direccion": "Adress:",
-    "redes": "Social media:"
+    "direccion": "Adress",
+    "redes": "Social media"
   },
   "bases": {
     "title": "TERMS AND CONDITIONS",

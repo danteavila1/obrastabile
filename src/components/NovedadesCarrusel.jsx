@@ -14,7 +14,7 @@ export default function NovedadesCarrusel({ institucionId }) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 1024) {
         setItemsPerPage(1);
       } else if (window.innerWidth < 1024) {
         setItemsPerPage(2);
@@ -71,7 +71,7 @@ export default function NovedadesCarrusel({ institucionId }) {
                     <div className="relative rounded-xl overflow-hidden shadow-lg h-64 group">
                       {nov.imagen && (
                         <img
-                          src={nov.imagen}
+                          src={nov.imagen[0]}
                           alt={t(`novedades.titulos.${nov.tituloKey}`)}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                         />

@@ -35,6 +35,14 @@
     "titulo": "NOVITÀ",
     "noHay": "Non ci sono novità al momento.",
     "verMas": "Vedi di più",
+    "volver": "Torna alle novità",
+    "noEncontrada": "La novità richiesta non è stata trovata.",
+    "filtros": {
+      "todasCategorias": "Tutte le istituzioni",
+      "buscarPlaceholder": "Cerca per titolo...",
+      "masRecientes": "Più recenti",
+      "masAntiguas": "Più vecchie"
+    },
     "titulos": {
       "nuevoPisoGimnasio": "NUOVO PAVIMENTO PER LA PALESTRA DEL CLUB",
       "nuevoPisoPatio": "Nuovo pavimento per il cortile della scuola dell'infanzia",
@@ -47,8 +55,14 @@
     },
     "autores": {
       "autorDeporte": "Attività fisica e sport",
-      "autorEducacionFormal": "Educazione Formale"
-    }
+      "autorEducacionFormal": "Educazione formale",
+      "autorInclusiva": "Istruzione inclusiva"
+    },
+    "instituciones": {
+    "obraStabile": "Obra Stábile",
+    "clubStabile": "Club Stábile",
+    "observatorio": "Osservatorio sull'Educazione, Accessibilità e Inclusione"
+  }
   },
   "auspiciantes": "SPONSOR",
   "footer": {
@@ -65,8 +79,8 @@
     "titulo": "CONTATTO",
     "celular": "CONTATTO",
     "email": "Email:",
-    "direccion": "Indirizzo:",
-    "redes": "Reti sociali:"
+    "direccion": "Indirizzo",
+    "redes": "Reti sociali"
   },
   "bases": {
     "title": "TERMINI E CONDIZIONI",
