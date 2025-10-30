@@ -12,11 +12,13 @@ import ContactoPage from "./pages/ContactoPage";
 import PaginaEnConstruccion from "./pages/PaginaEnConstruccion";
 import NovedadesPage from "./pages/NovedadesPage";
 import NovedadPage from "./pages/NovedadPage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Header />
+      <ScrollToTop />
       <Routes>
         {/* Página principal */}
         <Route
@@ -30,18 +32,16 @@ function App() {
           }
         />
 
-      {/* Página de una institución */}
-      <Route path="/institucion/:id" element={<InstitucionPage />} />
-      {/* Página de contacto*/}
-      <Route path="/contacto" element={<ContactoPage />} />
-      {/* Página en construcción*/}
-      <Route path="/construccion" element={<PaginaEnConstruccion />} />
-      {/* Página en novedades*/}
-      <Route path="/novedades" element={<NovedadesPage />} />
-      <Route path="/novedades/:id" element={<NovedadPage />} />
+        {/* Página de una institución */}
+        <Route path="/institucion/:id" element={<InstitucionPage />} />
+        {/* Página de contacto*/}
+        <Route path="/contacto" element={<ContactoPage />} />
+        {/* Página en construcción*/}
+        <Route path="/construccion" element={<PaginaEnConstruccion />} />
+        {/* Página en novedades*/}
+        <Route path="/novedades" element={<NovedadesPage />} />
+        <Route path="/novedades/:id" element={<NovedadPage />} />
       </Routes>
-      
-
       <Footer />
       <SocialBar />
       <WhatsAppButton />

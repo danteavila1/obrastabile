@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { novedades } from "../data/novedades";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function NovedadesCarrusel({ institucionId }) {
   const { t } = useTranslation();
@@ -39,6 +40,8 @@ export default function NovedadesCarrusel({ institucionId }) {
       setCurrentIndex(currentIndex - 1);
     }
   };
+  const visibleItems = Math.min(itemsPerPage, novedadesInstitucion.length);
+
 
   return (
     <div className="mt-10 relative">
@@ -56,14 +59,18 @@ export default function NovedadesCarrusel({ institucionId }) {
           <div className="relative">
             <div className="flex justify-center max-w-2xl lg:max-w-5xl mx-auto px-5">
               <div
-                className="flex transition-transform duration-500 ease-in-out"
+                className={`flex transition-transform duration-500 ease-in-out ${
+                  novedadesInstitucion.length < itemsPerPage ? "justify-center" : ""
+                }`}
                 style={{
-                  transform: `translateX(-${(currentIndex * 100) / itemsPerPage}%)`,
-                  width: `${(novedadesInstitucion.length * 100) / itemsPerPage}%`,
+                  transform: `translateX(-${(currentIndex * 100) / visibleItems}%)`,
+                  width: `${(novedadesInstitucion.length * 100) / visibleItems}%`,
                 }}
               >
+
                 {novedadesInstitucion.map((nov, idx) => (
-                  <div
+                  <Link
+                    to={`/novedades/${nov.id}`}
                     key={idx}
                     className="p-2 flex-shrink-0"
                     style={{ width: `${100 / itemsPerPage}%` }}
@@ -84,41 +91,41 @@ export default function NovedadesCarrusel({ institucionId }) {
                         <h3 className="text-xl font-semibold mt-2 drop-shadow-lg">
                           {t(`novedades.titulos.${nov.tituloKey}`)}
                         </h3>
-                        
                         <p className="text-xs mt-1 drop-shadow-lg italic">
                           {nov.fecha}
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </div>
           </div>
 
+          {/* Botones de navegación con Lucide */}
+          <button
+            onClick={prevSlide}
+            disabled={currentIndex === 0}
+            className="absolute left-8 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full transition disabled:opacity-30"
+          >
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button
+            onClick={nextSlide}
+            disabled={currentIndex >= novedadesInstitucion.length - itemsPerPage}
+            className="absolute right-8 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-3 rounded-full transition disabled:opacity-30"
+          >
+            <ChevronRight className="w-5 h-5" />
+          </button>
+
           <div className="text-center mt-10">
             <Link
-              to="/construccion"
+              to="/novedades"
               className="inline-block bg-black text-white font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-800 transition duration-300"
             >
               {t("novedades.verMas")}
             </Link>
           </div>
-
-          <button
-            onClick={prevSlide}
-            disabled={currentIndex === 0}
-            className="absolute left-10 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70 disabled:opacity-30"
-          >
-            ◀
-          </button>
-          <button
-            onClick={nextSlide}
-            disabled={currentIndex >= novedadesInstitucion.length - itemsPerPage}
-            className="absolute right-10 top-1/2 -translate-y-1/2 bg-black/40 text-white p-3 rounded-full hover:bg-black/70 disabled:opacity-30"
-          >
-            ▶
-          </button>
         </div>
       )}
     </div>

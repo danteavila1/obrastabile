@@ -14,5 +14,9 @@ export const novedades = [
     imagen: [gimclubstabile, gimclubstabile],
     destacado: true,
   },
+  
+  
+  
+  
 ];
 
