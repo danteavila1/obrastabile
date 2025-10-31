@@ -59,12 +59,17 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #fad016;
 }
+/* 🔹 Mantener borde amarillo cuando se hace click o queda seleccionado */
+button:active,
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-color: #fad016 !important;
+  outline: none; /* Evita el borde blanco del navegador */
+  box-shadow: 0 0 0 2px #fad01633; /* Sombra suave amarilla opcional */
 }
+
 
 @media (prefers-color-scheme: light) {
   :root {

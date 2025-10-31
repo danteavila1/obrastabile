@@ -3,6 +3,7 @@ import bannerContacto from "../assets/banner/prueba.jpeg";
 import { novedades } from "../data/novedades";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
+import { ChevronDown } from "lucide-react";
 
 
 export default function NovedadesPage() {
@@ -57,31 +58,45 @@ export default function NovedadesPage() {
       {/* Filtros */}
       <div className="max-w-5xl mx-auto px-5 mb-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          {/* Filtro por categoría */}
-          <select
-            value={filtroCategoria}
-            onChange={(e) => setFiltroCategoria(e.target.value)}
-            className="border border-gray-300 rounded-lg p-2 w-full md:w-1/3"
-          >
-            <option value="todas">
-              {t("novedades.filtros.todasCategorias")}
-            </option>
-            {categorias.map((cat) => (
-              <option key={cat} value={cat}>
-                {cat}
+         {/* Filtro por categoría */}
+          <div className="relative w-full md:w-1/3">
+            <select
+              value={filtroCategoria}
+              onChange={(e) => setFiltroCategoria(e.target.value)}
+              className="border border-gray-600 bg-gray-800 text-white rounded-lg p-2 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-[#04ab8d] pr-10"
+            >
+              <option value="todas" className="bg-[#04ab8d] text-white">
+                {t("novedades.filtros.todasCategorias")}
               </option>
-            ))}
-          </select>
+              {categorias.map((cat) => (
+                <option key={cat} value={cat} className="bg-[#04ab8d] text-white">
+                  {cat}
+                </option>
+              ))}
+            </select>
+            <ChevronDown
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none w-5 h-5"
+            />
+          </div>
 
           {/* Filtro por fecha */}
-          <select
-            value={ordenFecha}
-            onChange={(e) => setOrdenFecha(e.target.value)}
-            className="border border-gray-300 rounded-lg p-2 w-full md:w-1/3"
-          >
-            <option value="recientes">{t("novedades.filtros.masRecientes")}</option>
-            <option value="antiguas">{t("novedades.filtros.masAntiguas")}</option>
-          </select>
+          <div className="relative w-full md:w-1/3">
+            <select
+              value={ordenFecha}
+              onChange={(e) => setOrdenFecha(e.target.value)}
+              className="border border-gray-600 bg-gray-800 text-white rounded-lg p-2 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-[#04ab8d] pr-10"
+            >
+              <option value="recientes" className="bg-[#04ab8d] text-white">
+                {t("novedades.filtros.masRecientes")}
+              </option>
+              <option value="antiguas" className="bg-[#04ab8d] text-white">
+                {t("novedades.filtros.masAntiguas")}
+              </option>
+            </select>
+            <ChevronDown
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none w-5 h-5"
+            />
+          </div>
 
           {/* Buscador */}
           <input

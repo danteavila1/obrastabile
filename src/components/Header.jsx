@@ -3,6 +3,7 @@ import { getMenuItems } from "../controllers/menuController";
 import logo from "../assets/fundacionstabilelogo.webp";
 import i18n from "../i18n";
 import { useTranslation } from "react-i18next";
+import { Menu, X } from "lucide-react"; // ✅ iconos para abrir/cerrar menú
 
 // Importa las banderas
 import flagAr from "../assets/flags/argentina.webp";
@@ -14,14 +15,13 @@ function cambiarIdioma(lng) {
 }
 
 export default function Header() {
-  const { t } = useTranslation(); // ✅ para traducir
-  const [isOpen, setIsOpen] = useState(false); // menú mobile
-  const [langOpen, setLangOpen] = useState(false); // dropdown idiomas
-  const [currentLang, setCurrentLang] = useState("es"); // idioma actual
+  const { t } = useTranslation();
+  const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
+  const [currentLang, setCurrentLang] = useState("es");
 
   const menu = getMenuItems();
 
-  // Diccionario de idiomas
   const flags = {
     es: { img: flagAr, alt: "Español" },
     it: { img: flagIt, alt: "Italiano" },
@@ -31,12 +31,12 @@ export default function Header() {
   const handleLangChange = (lang) => {
     setCurrentLang(lang);
     setLangOpen(false);
-    cambiarIdioma(lang); // ✅ activa el cambio de idioma
+    cambiarIdioma(lang);
   };
 
   return (
     <header className="bg-[#04ab8d] shadow-md shadow-black/20 relative bottom-8 left-1/2 transform -translate-x-1/2 w-screen md:w-full z-50 md:rounded-xl max-w-3xl lg:max-w-4xl">
-      <div className="flex justify-between items-center px-7 py-3 relative ">
+      <div className="flex justify-between items-center px-7 py-3 relative">
         {/* Logo */}
         <div className="flex-1 flex justify-start relative">
           <a href="/" className="flex items-center gap-2">
@@ -58,7 +58,7 @@ export default function Header() {
               href={item.path}
               className="text-white hover:text-gray-200 transition whitespace-nowrap"
             >
-              {t(`menu.${item.key}`)} {/* 🔹 Traduce el nombre */}
+              {t(`menu.${item.key}`)}
             </a>
           ))}
         </nav>
@@ -82,7 +82,7 @@ export default function Header() {
             <img
               src={flags[currentLang].img}
               alt={flags[currentLang].alt}
-              className="h-6 w-auto group-hover:brightness-110" 
+              className="h-6 w-auto group-hover:brightness-110"
             />
             <span className="text-sm transition-colors group-hover:text-[#fad016]">▼</span>
           </div>
@@ -109,10 +109,15 @@ export default function Header() {
 
         {/* Botón Mobile */}
         <button
-          className=" md:hidden text-white text-2xl ml-4"
           onClick={() => setIsOpen(!isOpen)}
+          className={`md:hidden text-2xl ml-4 rounded-lg p-2 transition-all duration-200 focus:outline-none
+            ${
+              isOpen
+                ? "text-[#fad016] border-2 border-[#fad016]"
+                : "text-white border-2 border-transparent hover:text-[#fad016] hover:border-[#fad016]"
+            }`}
         >
-          ☰
+          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
@@ -125,7 +130,7 @@ export default function Header() {
               href={item.path}
               className="block px-6 py-2 text-white hover:bg-[#039e82]"
             >
-              {t(`menu.${item.key}`)} {/* 🔹 Traduce también en mobile */}
+              {t(`menu.${item.key}`)}
             </a>
           ))}
 
@@ -162,10 +167,7 @@ export default function Header() {
               {Object.entries(flags)
                 .filter(([key]) => key !== currentLang)
                 .map(([key, { img, alt }]) => (
-                  <button
-                    key={key}
-                    onClick={() => handleLangChange(key)}
-                  >
+                  <button key={key} onClick={() => handleLangChange(key)}>
                     <img src={img} alt={alt} className="h-6 w-auto" />
                   </button>
                 ))}
