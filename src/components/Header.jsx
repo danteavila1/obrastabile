@@ -56,7 +56,7 @@ export default function Header() {
             <a
               key={item.id}
               href={item.path}
-              className="text-white hover:text-gray-200 transition whitespace-nowrap"
+              className="quattrocento-bold text-white hover:text-gray-200 transition whitespace-nowrap"
             >
               {t(`menu.${item.key}`)}
             </a>
