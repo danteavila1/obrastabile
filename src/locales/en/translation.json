@@ -6,10 +6,10 @@
     "contacto": "Contact"
   },
   "ejes": {
-    "formal": "FORMAL EDUCATION - ",
-    "inclusiva": "INCLUSIVE EDUCATION - ",
-    "deportes": "PHYSICAL ACTIVITY & SPORTS EDUCATION - ",
-    "trabajo": "EDUCATION & WORK."
+    "formal": "FORMAL EDUCATION  ",
+    "inclusiva": "INCLUSIVE EDUCATION  ",
+    "deportes": "PHYSICAL ACTIVITY & SPORTS EDUCATION  ",
+    "trabajo": "EDUCATION & WORK"
   },
   "novedades": {
     "titulo": "NEWS",

@@ -6,10 +6,10 @@
     "contacto": "Contacto"
   },
   "ejes": {
-    "formal": "EDUCACIÓN FORMAL - ",
-    "inclusiva": "EDUCACIÓN INCLUSIVA - ",
-    "deportes": "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES - ",
-    "trabajo": "EDUCACIÓN Y TRABAJO."
+    "formal": "EDUCACIÓN FORMAL",
+    "inclusiva": "EDUCACIÓN INCLUSIVA",
+    "deportes": "EDUCACIÓN ACTIVIDAD FÍSICA Y DEPORTES",
+    "trabajo": "EDUCACIÓN Y TRABAJO"
   },
 
 

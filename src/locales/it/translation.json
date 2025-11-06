@@ -6,10 +6,10 @@
     "contacto": "Contatto"
   },
   "ejes": {
-    "formal": "ISTRUZIONE FORMALE - ",
-    "inclusiva": "ISTRUZIONE INCLUSIVA - ",
-    "deportes": "ATTIVITÀ FISICA E SPORTIVA - ",
-    "trabajo": "ISTRUZIONE E LAVORO."
+    "formal": "ISTRUZIONE FORMALE  ",
+    "inclusiva": "ISTRUZIONE INCLUSIVA ",
+    "deportes": "ATTIVITÀ FISICA E SPORTIVA ",
+    "trabajo": "ISTRUZIONE E LAVORO"
   },
   "novedades": {
     "titulo": "NOVITÀ",
