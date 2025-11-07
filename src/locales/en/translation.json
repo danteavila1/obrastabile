@@ -24,15 +24,20 @@
       "masAntiguas": "Oldest first"
     },
     "titulos": {
-      "concurso21-10-25": "NEW FLOOR FOR THE CLUB GYM"
+    "concurso21-10-25": "LAUNCH OF THE GOOD PRACTICES FOR INCLUSION IN EDUCATION CONTEST",
+    "temuco10-10-25": "THE OBSERVATORY IN TEMUCO"
     },
     "descripciones": {
-
-    },
+      "descconcurso21-10-25": "On Friday, October 3, 2025, the Launch Ceremony of the Good Practices for Inclusion in Education Contest was held.\nThe contest seeks to promote, disseminate, and reward good practices in the educational field. A method, action, or technique that demonstrates positive results and enables all people to reach their full potential, regardless of differences. It is aimed at education professionals, interdisciplinary teams, educational institutions, advanced students, and non-formal education organizations, both in Argentina and in other Spanish-speaking countries.\nThe proposals may be oriented according to three axes: institutional and classroom practices; physical education and sports; and training for employment and labor inclusion. A jury of specialists will evaluate the experiences according to their impact, relevance, originality, and network articulation.\nThe publication of the results is scheduled for April 2026. The first prizes (1st and 2nd) will receive a financial award and the outstanding works (from 1st to 5th) will be presented at the 5th Congress on Inclusive Education.\nThe Contest is sponsored by PAHO, Hotel Global, Farmacias Global, Municipalidad de Plaza Huincul, Ingeniería SIMA, McDonald’s, BACSSA, MAUAD, and Logos.",
+      
+      "desctemuco10-10-25": "The Observatory of Education, Accessibility and Inclusion was invited to participate in various academic activities in the city of Temuco, Chile.\nIts Director, Pablo Marín, participated as the main invited academic, leading different proposals designed jointly with the Faculty of Health Sciences of the Catholic University of Temuco.\nThe activities took place between October 6 and 9.\nAmong the busy schedule, the following stand out:\n- Participation as part of the team in the research project “Inclusive Practices in the Transition between Secondary and Higher Education. Focus on disability and neurodivergence”, led by Dr. Lissette Fuentes Ugarte and Dr. Víctor Chávez Taeger.\n- Workshop: “Support and adjustments for inclusive vocational guidance”.\n- Discussion with professors and students from the Kinesiology, Occupational Therapy and Speech Therapy programs.\n- Workshop: “Early childhood education and inclusion: reflections on disability and diversity”.\n- Formal meeting with the Dean of the Faculty of Health Sciences of the Catholic University, Dr. Bertha Escobar Alaníz, and other authorities."
+    }
+    ,
     "autores": {
       "autorDeporte": "Physical activity and sport",
       "autorEducacionFormal": "Formal education",
-      "autorInclusiva": "Inclusive education"
+      "autorInclusiva": "Inclusive education",
+      "autorObra": "Obra Stábile"
     },
     "instituciones": {
     "obraStabile": "Obra Stábile",
@@ -40,7 +45,7 @@
     "observatorio": "Observatory of Education, Accessibility and Inclusion"
   }
   },
-  "auspiciantes": "SPONSORS",
+  "auspiciantes": "FRIENDS OF THE MISSION",
   "footer": {
     "enlacesRapidos": "Quick links",
     "quienesSomos": "About us",
@@ -49,7 +54,8 @@
     "donaciones": "Donations / How to support",
     "enlaceDonaciones": "Donation link",
     "infoBancaria": "Bank info or ways to contribute",
-    "seguinos": "Follow us!"
+    "seguinos": "Follow us!",
+    "masInfo": "More information"
   },
   "contacto": {
     "titulo": "CONTACT",

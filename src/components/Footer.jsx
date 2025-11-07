@@ -36,7 +36,7 @@ return (
                 </a>
               </li>
               <li>
-                <a href="/construccion"
+                <a href="/novedades"
                   className="inline-block text-base leading-loose text-body-color hover:text-primary dark:text-dark-6">
                   {t("footer.novedades")}
                 </a>
@@ -48,7 +48,7 @@ return (
         <div className="w-full px-4 sm:w-1/2 lg:w-2/12">
           <div className="mb-10 w-full">
             <h4 className="mb-9 text-lg font-semibold text-dark dark:text-white">
-              {t("footer.novedades")}
+              {t("footer.masInfo")}
             </h4>
             <ul className="space-y-3">
               <li>

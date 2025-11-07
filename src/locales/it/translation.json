@@ -21,15 +21,15 @@
       "capacitacion": "Formazione"
     },
     "titulos": {
-      "gimnasioClubStabile": "Palestra Club Stabile",
-      "patioJardin": "Cortile e Giardino",
-      "capacitaciones": "Formazioni 2025"
-    },
-    "descripciones": {
-      "gimnasioClubStabile": "Aggiornamenti sulle attività sportive del Club Stabile.",
-      "patioJardin": "Miglioramenti e novità del cortile e giardino delle nostre istituzioni.",
-      "capacitaciones": "Programmi di formazione per insegnanti e personale."
-    }
+  "concurso21-10-25": "LANCIO DEL CONCORSO BUONE PRATICHE DI INCLUSIONE NELL'EDUCAZIONE",
+  "temuco10-10-25": "L'OSSERVATORIO A TEMUCO"
+  },
+  "descripciones": {
+    "descconcurso21-10-25": "Venerdì 3 ottobre 2025 si è svolta la Cerimonia di Lancio del Concorso Buone Pratiche di Inclusione nell'Educazione.\nIl concorso mira a promuovere, diffondere e premiare le buone pratiche nell'ambito educativo. Metodi, azioni o tecniche che mostrano risultati positivi e permettono a tutte le persone di raggiungere il proprio massimo potenziale, al di là delle differenze. È rivolto a professionisti dell’educazione, équipe interdisciplinari, istituzioni educative, studenti avanzati e organizzazioni di educazione non formale, sia dell’Argentina che di altri paesi di lingua spagnola.\nLe proposte potranno essere orientate secondo tre assi: pratiche istituzionali e didattiche; educazione fisica e sport; formazione per l’impiego e inclusione lavorativa. Una giuria di specialisti valuterà le esperienze in base al loro impatto, pertinenza, originalità e articolazione in rete.\nLa pubblicazione dei risultati è prevista per aprile 2026. I primi premi (1° e 2°) riceveranno un riconoscimento economico e i lavori selezionati (dal 1° al 5°) saranno presentati nell’ambito del V Congresso di Inclusione Educativa.\nIl Concorso è patrocinato da OPS, Hotel Global, Farmacias Global, Municipalidad de Plaza Huincul, Ingeniería SIMA, McDonald’s, BACSSA, MAUAD e Logos.",
+    
+    "desctemuco10-10-25": "L'Osservatorio sull'Educazione, l'Accessibilità e l'Inclusione è stato invitato a partecipare a varie attività accademiche nella città di Temuco, Cile.\nIl suo Direttore, Pablo Marín, ha partecipato come principale accademico invitato, conducendo diverse proposte progettate congiuntamente con la Facoltà di Scienze della Salute dell'Università Cattolica di Temuco.\nLe attività si sono svolte tra il 6 e il 9 ottobre.\nTra l’intensa agenda, si evidenziano:\n- Partecipazione, come membro del team, al Progetto di Ricerca “Pratiche Inclusive nella Transizione tra Scuola Secondaria e Università. Focus su disabilità e neurodivergenza”, guidato dalla Dott.ssa Lissette Fuentes Ugarte e dal Dott. Víctor Chávez Taeger.\n- Laboratorio: “Supporto e adattamenti per l’orientamento vocazionale inclusivo”.\n- Conversazione con docenti e studenti dei corsi di Kinesiologia, Terapia Occupazionale e Logopedia.\n- Laboratorio: “Educazione della prima infanzia e inclusione: riflessioni su disabilità e diversità”.\n- Incontro istituzionale con la Preside della Facoltà di Scienze della Salute dell’Università Cattolica, Dott.ssa Bertha Escobar Alaníz, e altre autorità."
+  }
+
   },
   "novedades": {
     "titulo": "NOVITÀ",
@@ -56,7 +56,8 @@
     "autores": {
       "autorDeporte": "Attività fisica e sport",
       "autorEducacionFormal": "Educazione formale",
-      "autorInclusiva": "Istruzione inclusiva"
+      "autorInclusiva": "Istruzione inclusiva",
+      "autorObra": "Obra Stábile"
     },
     "instituciones": {
     "obraStabile": "Obra Stábile",
@@ -64,7 +65,7 @@
     "observatorio": "Osservatorio sull'Educazione, Accessibilità e Inclusione"
   }
   },
-  "auspiciantes": "SPONSOR",
+  "auspiciantes": "AMICI DELL’OPERA",
   "footer": {
     "enlacesRapidos": "Link rapidi",
     "quienesSomos": "Chi siamo",
@@ -73,7 +74,8 @@
     "donaciones": "Donazioni / Come supportare",
     "enlaceDonaciones": "Link per donazioni",
     "infoBancaria": "Informazioni bancarie o modalità di contributo",
-    "seguinos": "Seguici!"
+    "seguinos": "Seguici!",
+    "masInfo": "Ulteriori informazioni"
   },
    "contacto": {
     "titulo": "CONTATTO",

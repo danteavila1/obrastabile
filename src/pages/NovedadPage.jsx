@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { novedades } from "../data/novedades";
 import { useTranslation } from "react-i18next";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import PortalModal from "../components/PortalModal";
 
 export default function NovedadPage() {
   const { id } = useParams();
@@ -123,19 +124,19 @@ export default function NovedadPage() {
         </p>
       </div>
 
-      {/* MODAL de pantalla completa */}
-      {isModalOpen && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex flex-col items-center justify-center">
-          {/* Botón cerrar */}
+      {/* Modal via Portal */}
+      <PortalModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        {/* Inside modal: large carousel + controls */}
+        <div className="relative w-full">
           <button
             onClick={() => setIsModalOpen(false)}
-            className="absolute top-5 right-5 text-white hover:text-gray-400 transition"
+            className="absolute top-5 right-5 text-white hover:text-gray-300 z-20"
+            aria-label="Cerrar"
           >
-            <X size={32} />
+            <X size={28} />
           </button>
 
-          {/* Carrusel dentro del modal */}
-          <div className="relative w-full max-w-5xl overflow-hidden">
+          <div className="overflow-hidden">
             <div
               className="flex transition-transform duration-700 ease-in-out"
               style={{
@@ -152,33 +153,37 @@ export default function NovedadPage() {
                   <img
                     src={img}
                     alt={`Imagen ${index + 1}`}
-                    className="w-full max-h-[90vh] object-contain"
+                    className="w-full max-h-[80vh] object-contain"
                   />
                 </div>
               ))}
             </div>
-
-            {/* Flechas en el modal */}
-            <button
-              onClick={handlePrev}
-              className="absolute top-1/2 left-5 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
-            >
-              <ChevronLeft className="w-7 h-7" />
-            </button>
-            <button
-              onClick={handleNext}
-              className="absolute top-1/2 right-5 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full transition"
-            >
-              <ChevronRight className="w-7 h-7" />
-            </button>
-
-            {/* Indicador */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-1 rounded-full text-sm">
-              {currentIndex + 1} / {novedad.imagen.length}
-            </div>
           </div>
+
+          {/* Flechas en el modal */}
+          {novedad.imagen.length > 1 && (
+            <>
+              <button
+                onClick={handlePrev}
+                className="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
+              >
+                <ChevronLeft className="w-7 h-7" />
+              </button>
+              <button
+                onClick={handleNext}
+                className="absolute right-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
+              >
+                <ChevronRight className="w-7 h-7" />
+              </button>
+
+              {/* Indicador */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-black/60 text-white px-4 py-1 rounded-full text-sm z-30">
+                {currentIndex + 1} / {novedad.imagen.length}
+              </div>
+            </>
+          )}
         </div>
-      )}
+      </PortalModal>
     </div>
   );
 }

@@ -26,21 +26,26 @@
       "masAntiguas": "Más antiguas"
     },
     "titulos": {
-      "concurso21-10-25": "LANZAMIENTO DEL CONCURSO BUENAS PRÁCTICAS DE INCLUSIÓN EN EDUCACIÓN"
+      "concurso21-10-25": "LANZAMIENTO DEL CONCURSO BUENAS PRÁCTICAS DE INCLUSIÓN EN EDUCACIÓN",
+      "temuco10-10-25": "EL OBSERVATORIO EN TEMUCO",
+      "italia26-10-25": "LAZO CENTENARIO - TEANO"
     },
     "descripciones": {
-      "descconcurso21-10-25": "El viernes 3 de octubre de 2025 se realizó el Acto de Lanzamiento del Concurso Buenas Prácticas de Inclusión en Educación.\nEl certamen busca promover, difundir y premiar las buenas prácticas en el ámbito educativo. Un método, acción o técnica que muestra resultados positivos y permite que todas las personas alcancen su máximo potencial, más allá de sus diferencias. Está dirigido a profesionales de la educación, equipos interdisciplinarios, instituciones educativas, estudiantes avanzados y organizaciones de educación no formal, tanto de Argentina como de otros países de habla hispana.\nLas propuestas podrán orientarse según tres ejes: prácticas institucionales y áulicas; educación física y deporte; y formación para el empleo e inclusión laboral. Un Jurado de especialistas evaluará las experiencias según su impacto, pertinencia, originalidad y articulación en red.\nLa publicación de los resultados está prevista para abril de 2026. Los primeros premios (1° y 2°) tendrán un reconocimiento económico y los trabajos destacados (del 1° a 5°) serán presentados en el marco del V Congreso de Inclusión Educativa.\nEl Concurso cuenta con el patrocinio de OPS, Hotel Global, Farmacias Global, Municipalidad de Plaza Huincul, Ingeniería SIMA, McDonald’s, BACSSA, MAUAD y Logos. "
+      "descconcurso21-10-25": "El viernes 3 de octubre de 2025 se realizó el Acto de Lanzamiento del Concurso Buenas Prácticas de Inclusión en Educación.\nEl certamen busca promover, difundir y premiar las buenas prácticas en el ámbito educativo. Un método, acción o técnica que muestra resultados positivos y permite que todas las personas alcancen su máximo potencial, más allá de sus diferencias. Está dirigido a profesionales de la educación, equipos interdisciplinarios, instituciones educativas, estudiantes avanzados y organizaciones de educación no formal, tanto de Argentina como de otros países de habla hispana.\nLas propuestas podrán orientarse según tres ejes: prácticas institucionales y áulicas; educación física y deporte; y formación para el empleo e inclusión laboral. Un Jurado de especialistas evaluará las experiencias según su impacto, pertinencia, originalidad y articulación en red.\nLa publicación de los resultados está prevista para abril de 2026. Los primeros premios (1° y 2°) tendrán un reconocimiento económico y los trabajos destacados (del 1° a 5°) serán presentados en el marco del V Congreso de Inclusión Educativa.\nEl Concurso cuenta con el patrocinio de OPS, Hotel Global, Farmacias Global, Municipalidad de Plaza Huincul, Ingeniería SIMA, McDonald’s, BACSSA, MAUAD y Logos. ",
+      "desctemuco10-10-25": "El Observatorio de la Educación, la Accesibilidad y la Inclusión fue invitado a participar de diversas actividades académicas en la Ciudad de Temuco, Chile.\nSu Director, Pablo Marín, participó como principal académico invitado, conduciendo variadas propuestas diseñadas en conjunto con la Facultad de Ciencias de la Salud de la Universidad Católica de Temuco.\nTodo transcurrió entre el 6 y el 9 de octubre.\nDe la cargadísima agenda se distingue lo siguiente:\n- Implicancia, como parte del equipo, en el Proyecto de Investigación “Prácticas Inclusivas en la Transición entre Educación Media y Superior. Enfoque en discapacidad y neurodivergencia”, liderado por la Dra. Lissette Fuentes Ugarte y el Dr. Víctor Chávez Taeger.\n- Taller “Apoyo y ajustes para la orientación vocacional inclusiva”.\n- Conversatorio con docentes y estudiantes de las carreras Kinesiología, Terapista Ocupacional y Fonoaudiología.\n- Taller “Educación parvularia e inclusión: reflexiones en torno a la discapacidad y la diversidad”.\n- Reunión protocolar con la Decana de la Facultad de Ciencias de la Salud de la Universidad Católica, Dra. Bertha Escobar Alaníz y otras autoridades.",
+      "descitalia26-10-25": "Transcurriendo el año 2024 se dio un primer paso hacia el fortalecimiento del vínculo entre Centenario y Teano, ciudades unidas por la figura del P. Jacinto Stábile. A través del intercambio de misivas entre el Dr. Fabio Porta, Diputado italiano, y el Intendente de Teano, Sr. Giovanni Scoglio, se establecieron los primeros acuerdos, que incluyeron la firma de un Protocolo de Colaboración y una invitación formal a la localidad natal del sacerdote fundador.\nEn octubre de 2025, el presidente de la Fundación Stábile, Lic. Matías Sánchez, viajó a Roma y a Teano, formando parte de la comitiva la vicedirectora del Colegio Secundario Virgen de Luján, Prof. Paola D’Amico, quien además ofició de traductora.\nEn la capital italiana se reunieron con el legislador Porta y, posteriormente, participaron en Teano de una celebración nacional el 26 de octubre, de un encuentro con el párroco local, P. Zannini, y de una reunión protocolar con autoridades municipales.\nDurante las reuniones se delinearon nuevos proyectos de cooperación, entre ellos posibles intercambios de educadores y estudiantes, encuentros deportivos y eventos culturales.\nEn simultáneo, la Obra Stábile lleva adelante diversas actividades comunitarias que promueven la identidad, la cultura y los valores italianos. Entre ellas, la organización de un Torneo de Futsal Infanto-Juvenil y la realización de la Fiesta de la Familia, ambas enmarcadas en el programa “Italia en la Patagonia” y desarrolladas junto al Circolo Cultura Italia de Neuquén y el Consulado General de Italia en Bahía Blanca."
     },
     "autores": {
       "autorDeporte": "Actividad física y deporte",
       "autorEducacionFormal": "Educación formal",
-      "autorInclusiva": "Educación inclusiva"
+      "autorInclusiva": "Educación inclusiva",
+      "autorObra": "Obra Stábile"
     }
   },
 
 
 
-  "auspiciantes": "AUSPICIANTES",
+  "auspiciantes": "AMIGOS DE LA OBRA",
   "footer": {
     "enlacesRapidos": "Enlaces rápidos",
     "quienesSomos": "Quiénes somos",
@@ -49,7 +54,8 @@
     "donaciones": "Donaciones / Cómo apoyar",
     "enlaceDonaciones": "Enlace para donaciones",
     "infoBancaria": "Información bancaria o formas de aporte",
-    "seguinos": "¡Seguinos!"
+    "seguinos": "¡Seguinos!",
+    "masInfo": "Más información"
   },
   "contacto": {
     "titulo": "CONTACTO",

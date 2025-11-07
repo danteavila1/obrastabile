@@ -32,13 +32,13 @@ export default function InstitucionesGrid() {
   return (
     <section className="relative mt-5 md:mt-10 w-full">
       {/* Texto de ejes */}
-      <h2 className="text-2xl md:text-3xl text-white text-center mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-7 flex-wrap">
+      <h2 className="text-2xl md:text-3xl text-white text-center mb-10 md:mb-15 leading-snug tracking-wide flex flex-col md:flex-row md:justify-center md:gap-8 flex-wrap">
         {ejes.map((eje) => (
           <span
             key={eje.key}
             onMouseEnter={() => setHoverEje(eje.key)}
             onMouseLeave={() => setHoverEje(null)}
-            className={`cursor-pointer transition-colors duration-300 ${
+            className={`cursor-pointer transition-colors duration-300 mb-4 md:mb-0 ${
               hoverEje === eje.key ? "text-[#fad016]" : "text-white"
             }`}
           >
@@ -50,7 +50,7 @@ export default function InstitucionesGrid() {
       {/* Contenedor principal */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-5 gap-0 items-stretch">
         {/* Logo grande */}
-        <div className="flex justify-center items-center pb-10 md:pb-0 md:px-5 md:col-span-2">
+        <div className="flex justify-center items-center pb-15 md:pb-0 md:px-5 md:col-span-2">
           <img
             src={bigLogo}
             alt="Logo Fundación"
