@@ -110,14 +110,14 @@ export default function Header() {
         {/* Botón Mobile */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`md:hidden text-2xl ml-4 rounded-lg p-2 transition-all duration-200 focus:outline-none
+          className={`btn-mobile md:hidden text-2xl ml-4 rounded-lg p-2 transition-all duration-200 focus:outline-none bg-black
             ${
               isOpen
                 ? "text-[#fad016] border-2 border-[#fad016]"
                 : "text-white border-2 border-transparent hover:text-[#fad016] hover:border-[#fad016]"
             }`}
         >
-          {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+          {isOpen ? <X className="w-5 h-5 text-[#fad016]" /> : <Menu className="w-5 h-5 text-[#fad016]" />}
         </button>
       </div>
 

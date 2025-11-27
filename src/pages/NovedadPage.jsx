@@ -86,13 +86,13 @@ export default function NovedadPage() {
           <>
             <button
               onClick={handlePrev}
-              className="absolute top-1/2 left-3 transform -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition"
+              className="btn-raw absolute top-1/2 left-3 transform -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition"
             >
               <ChevronLeft className="w-6 h-6" />
             </button>
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition"
+              className="btn-raw absolute top-1/2 right-3 transform -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white p-2 rounded-full transition"
             >
               <ChevronRight className="w-6 h-6" />
             </button>
@@ -130,10 +130,10 @@ export default function NovedadPage() {
         <div className="relative w-full">
           <button
             onClick={() => setIsModalOpen(false)}
-            className="absolute top-5 right-5 text-white hover:text-gray-300 z-20"
+            className="btn-raw absolute top-5 right-5 z-20"
             aria-label="Cerrar"
           >
-            <X size={28} />
+            <X size={28} className="text-white hover:text-[#fad016]" />
           </button>
 
           <div className="overflow-hidden">
@@ -165,13 +165,13 @@ export default function NovedadPage() {
             <>
               <button
                 onClick={handlePrev}
-                className="absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
+                className="btn-raw absolute left-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
               >
                 <ChevronLeft className="w-7 h-7" />
               </button>
               <button
                 onClick={handleNext}
-                className="absolute right-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
+                className="btn-raw absolute right-5 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full z-30"
               >
                 <ChevronRight className="w-7 h-7" />
               </button>
