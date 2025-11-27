@@ -111,15 +111,15 @@ export default function NovedadPage() {
           {novedad.categoria}
         </span>
 
-        <h1 className="text-4xl font-bold text-gray-100 drop-shadow-md mt-5">
+        <h1 className="text-4xl font-bold text-gray-100 drop-shadow-md mt-5 break-words">
           {t(`novedades.titulos.${novedad.tituloKey}`)}
         </h1>
 
-        <p className="text-sm text-gray-400 italic">
+        <p className="hidden text-sm text-gray-400 italic">
           {novedad.fecha} — {t(`novedades.autores.${novedad.autorKey}`)}
         </p>
 
-        <p className="text-lg text-gray-200 leading-relaxed whitespace-pre-line text-left">
+        <p className="text-lg text-gray-200 leading-relaxed whitespace-pre-line text-left mt-10">
           {t(`novedades.descripciones.${novedad.descripcionKey}`)}
         </p>
       </div>

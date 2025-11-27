@@ -30,6 +30,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
 }
 
 a {
@@ -53,8 +55,29 @@ h1 {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 3.2em;
   line-height: 1.1;
+}
+
+
+/* Tamaño móvil */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Tamaño tablet */
+@media (min-width: 641px) and (max-width: 1024px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+
+/* Tamaño desktop (lo que ya tenías) */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 3.2em;
+  }
 }
 
 h2 {

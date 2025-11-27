@@ -37,7 +37,7 @@ export const novedades = [
   {
     id: 3,
     institucionId: 7,
-    categoria: "Italia en La Patagónia",
+    categoria: "Italia en la Patagonia",
     tituloKey: "italia26-10-25",
     descripcionKey: "descitalia26-10-25",
     autorKey: "autorObra",

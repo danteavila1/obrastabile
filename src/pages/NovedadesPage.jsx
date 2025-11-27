@@ -134,7 +134,7 @@ export default function NovedadesPage() {
                   <h3 className="text-2xl font-semibold mt-2 drop-shadow-lg">
                     {t(`novedades.titulos.${nov.tituloKey}`)}
                   </h3>
-                  <p className="text-xs mt-1 drop-shadow-lg italic">{nov.fecha}</p>
+                  <p className="hidden text-xs mt-1 drop-shadow-lg italic">{nov.fecha}</p>
                 </div>
               </div>
             </Link>
