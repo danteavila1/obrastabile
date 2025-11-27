@@ -85,8 +85,8 @@ export default function NovedadesSection({ institucionId }) {
                       </p>
                       <div className="flex items-center gap-3 text-sm text-gray-300">
                         <p>{t(`novedades.autores.${item.autorKey}`)}</p>
-                        <span className="w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
-                        <p>{item.fecha}</p>
+                        <span className="hidden w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
+                        <p className="hidden">{item.fecha}</p>
                       </div>
                     </div>
                   </div>
@@ -118,8 +118,8 @@ export default function NovedadesSection({ institucionId }) {
                     </h3>
                     <div className="flex items-center text-sm text-gray-300 gap-1">
                       <p className="">{t(`novedades.autores.${item.autorKey}`)}</p>
-                      <span className="w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
-                      <p className="">{item.fecha}</p>
+                      <span className="hidden w-[3px] h-[3px] bg-gray-300 rounded-full"></span>
+                      <p className="hidden ">{item.fecha}</p>
                     </div>
                   </div>
                 </div>
